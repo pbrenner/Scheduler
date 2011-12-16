@@ -1,0 +1,97 @@
+<style type="text/css">
+#editform label.error {
+	margin-left: 10px;
+	width: auto;
+	display: inline;
+	float: none;
+}
+
+</style>
+<!-- start box -->
+<div class="box">
+	<!-- start detail_box -->
+	<?php echo $this->Form->create('User', array('id'=>'editform'));?>
+	<div class="detail_box">
+		<?php echo $this->element('titleBar', array('returnLink' => '/Patients/Index', 'title'=>'User Profile')); ?>
+		<!-- start info -->
+		<div class="info">
+			<div class="error" style="display:none;color: red;height:30px;font-weight:bold;font-size:14px;">
+      		<img src="/img/warning.gif" alt="Warning!" width="24" height="24" style="float:left; margin: -5px 10px 0px 0px; ">
+
+      			<span></span>.<br clear="all">
+    		</div>
+			<div class="users form">
+				<fieldset>
+					<div class="input text required">
+						<label for="UserOffice" style="text-align:left;">Office:</label>
+						<?php echo $this->request->data['Office']['name']; ?>
+					</div>
+					<div class="input text required">
+						<label for="UserFirstName" style="text-align:left;">First Name:</label>
+						<?php echo $this->Form->input('User.first_name', array('label'=>false,'div'=>false,'size'=>30,'id'=>'firstName','name'=>'firstName')); ?>
+					</div>
+					<div class="input text required">
+						<label for="UserLastName" style="text-align:left;">Last Name:</label>
+						<?php echo $this->Form->input('User.last_name', array('label'=>false,'div'=>false,'size'=>30,'id'=>'lastName','name'=>'lastName')); ?>
+					</div>
+					<div class="input text required">
+						<label for="UserUsername" style="text-align:left;">Username:</label>
+						<?php echo $this->Form->input('User.username', array('label'=>false,'div'=>false,'size'=>30,'id'=>'username','name'=>'username')); ?>
+					</div>
+					<div class="input text required">
+						<label for="UserPassword" style="text-align:left;">Password:</label>
+						<?php echo $this->Form->input('User.password', array('label'=>false,'div'=>false,'size'=>30,'value'=>'','id'=>'password','name'=>'password')); ?>
+					</div>
+					<div class="input text required">
+						<label for="UserPassword" style="text-align:left;">Verify Password:</label>
+						<?php echo $this->Form->input('User.password2', array('label'=>false,'div'=>false,'size'=>30,'value'=>'','id'=>'password2','name'=>'password2')); ?>
+					</div>
+					<div class="input text required">
+						<label for="UserEmail" style="text-align:left;">Email:</label>
+						<?php echo $this->Form->input('User.email', array('label'=>false,'div'=>false,'size'=>30,'id'=>'email','name'=>'email')); ?>
+					</div>
+					<?php echo $this->Form->hidden('User.office_id'); ?>
+					<?php echo $this->Form->hidden('User.id'); ?>
+    			</fieldset>
+			</div>
+		</div>
+		<!-- end info -->
+		<div class="clear"></div>
+	</div>
+	</form>
+	<!-- end detail_box -->
+</div>
+<!-- end box -->
+<script type="text/javascript">
+	
+	jQuery.validator.messages.required = "";
+	$(document).ready(function(){
+		$("#editform").validate({
+			invalidHandler: function(e, validator) {
+				var errors = validator.numberOfInvalids();
+				if (errors) {
+					var message = errors == 1
+						? 'You missed 1 field. It has been highlighted below'
+						: 'You missed ' + errors + ' fields.  They have been highlighted below';
+					$("div.error span").html(message);
+					$("div.error").show();
+				} else {
+					$("div.error").hide();
+				}
+			},
+  			rules: {
+  				firstName: "required",
+  				lastName: "required",
+  				email: "required"
+  			},
+			messages: {
+				email: {
+					required: " ",
+					email: "Please enter a valid email address, example: you@yourdomain.com",
+					remote: jQuery.validator.format("{0} is already taken, please enter a different address.")	
+				}
+			}
+		});
+  	});
+	
+</script>

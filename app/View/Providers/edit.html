@@ -1,0 +1,233 @@
+<script type="text/javascript">
+$().ready(function() {
+	// validate signup form on keyup and submit
+	$("#ProviderEditForm").validate();
+	
+	$(function($){
+		$("#ProviderPhone").mask("(999) 999-9999");
+		$("#ProviderCellPhone").mask("(999) 999-9999");
+		$("#ProviderFax").mask("(999) 999-9999");
+	});
+});
+</script>
+	<?php echo $this->Form->create('Provider', array('name'=>'providerEdit'));?>
+		<!-- start detail_box -->
+		<div class="detail_box">
+			<?php echo $this->element('titleBar', array('returnLink' => '/Providers/Index', 'title'=>'Provider Details')); ?>
+            <!-- start info -->
+            <div class="info">
+        	<div>
+            	<div class="editTable  border_bottom">
+                	<!-- start row -->
+                	<div class="row">
+                    	<div class="td3">
+                			<label>Last</label>
+                    		  <?php echo $this->Form->input('Provider.last_name',array('class' =>'input required',
+                			 											   			   'div'   => FALSE,
+                			 											   			   'label' => FALSE,
+																					   'style' =>'width:113px')); ?>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                    <!-- start row -->
+                	<div class="row">
+                    	<div class="td3">
+                			<label>First</label>
+                    		<?php echo $this->Form->input('Provider.first_name',array('class' =>'input required',
+                			 											   			   'div'   => FALSE,
+                			 											   			   'label' => FALSE,
+																					   'style' =>'width:113px')); ?>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                    <!-- start row -->
+                	<div class="row">
+                    	<div class="td1">
+                			<label>MI</label>
+							<?php echo $this->Form->input('Provider.middle_initial',array('class' =>'input',
+                			 											   			   'div'   => FALSE,
+                			 											   			   'label' => FALSE,
+																					   'style' =>'width:33px')); ?>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                    <!-- start row -->
+                	<div class="row">
+                    	<div class="td2">
+                			<label>Title</label>
+                    		<?php echo $this->Form->input('Provider.title',array( 'class' =>'input ',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE,
+																		   'empty' => 'Gender',
+                                                                           'style' =>'width:73px'));
+							?>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                    <!-- start row -->
+                	<div class="row">
+                    	<div class="td4">
+                			<label>Type</label>
+                    		<?php echo $this->Form->input('Provider.provider_type_id',array('options' => $providerTypes, 
+                			 											   			 'class' =>'selected',
+                			 											   			 'div'   => FALSE,
+                			 											   			 'label' => FALSE,
+                			 											   			 'empty' => 'Provider Type'));
+							?>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                    <!-- start row -->
+                	<div class="row">
+                    	<div class="td3">
+                			<label>Status</label>
+                    		<?php echo $this->Form->input('Provider.status',array('options' => $status, 
+                			 											   			 'class' =>'selected',
+                			 											   			 'div'   => FALSE,
+                			 											   			 'label' => FALSE,
+                			 											   			 'empty' => 'Status'));
+							?>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                </div>
+                <!-- end identy -->
+                <div class="editTable">
+                	<!-- start cell -->
+                	<div class="row">
+                    	<div class="td4 start">
+                			<label>Home Phone</label>
+                			 <?php echo $this->Form->input('Provider.phone',array( 'class' =>'input phone',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE));
+							?>
+                        </div>
+                    </div>
+                    <!-- end cell -->
+                    <!-- start cell -->
+                	<div class="row">
+                    	<div class="td4">
+                			<label>Cell Phone</label>
+                			 <?php echo $this->Form->input('Provider.cell_phone',array( 'class' =>'input phone',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE));
+							?>
+                        </div>
+                    </div>
+                    <!-- end cell -->
+                    <!-- start cell -->
+                	<div class="row">
+                    	<div class="td4">
+                			<label>Fax</label>
+                			 <?php echo $this->Form->input('Provider.fax',array( 'class' =>'input phone',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE));
+							?>
+                        </div>
+                    </div>
+                    <!-- end cell -->
+                    <!-- start cell -->
+                	<div class="row">
+                    	<div class="td4">
+                			<label>Email</label>
+                			 <?php echo $this->Form->input('Provider.email',array( 'class' =>'input',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE));
+							?>
+                        </div>
+                    </div>
+                    <!-- end cell -->
+                </div>
+                <div class="clear" style="height:9px;"></div>
+                <div class="editTable border_bottom">
+                	<!-- start cell -->
+                	<div class="row">
+                    	<div class="td4 start">
+                			<label>Billing System Name</label>
+                			 <?php echo $this->Form->input('Provider.billing_name',array( 
+                			 											   'class' =>'input',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE));
+							?>
+                        </div>
+                    </div>
+                    <!-- end cell -->
+                    <!-- start cell -->
+                	<div class="row">
+                    	<div class="td4 start">
+                			<label>Payroll Name</label>
+                			 <?php echo $this->Form->input('Provider.payroll_name',array( 
+                			 											   'class' =>'input',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE));
+							?>
+                        </div>
+                    </div>
+                    <!-- end cell -->
+                    <!-- start cell -->
+                    <div class="notes" style='padding-top:0px;margin-left: 173px;'>
+                    	<label>Notes</label>
+                        <?php echo $this->Form->textarea('Provider.notes',array('class' =>'textarea',
+                			 											   			   'div'   => FALSE,
+                			 											   			   'label' => FALSE)); ?>
+                    </div>
+                    <!-- end cell -->
+                    <div class="clear"></div>
+                    
+                </div>
+                <br/>
+                <!-- start history_box -->
+                <div class="history_box">
+                	<!-- start tab_nav -->
+                	<div class="tab_nav">
+                    	<ul>
+                        	<li><a href="#" class="active">Visits</a></li>
+                        	<li><a href="#">Chats</a></li>
+                        </ul>
+                    </div>	
+                    <!-- end tab_nav -->
+                    <div class="clear"></div>
+                    <!-- start tab_content -->
+                    <div class="tab_content">
+                    	<!-- start blue_row -->
+                    	<div class="blue_row">
+                        	<div class="td1">Date</div>
+                            <div class="td2">Patient</div>
+                            <div class="td3">Facility</div>
+                            <div class="td4">Proc Codes</div>
+                            <div class="td4">F/U Date</div>
+                            <div class="td5">Action</div>
+                            <div class="clear"></div>
+                        </div>
+                        <!-- end blue_row -->
+                        <!-- start white_box -->
+                        <div class="white_box">
+                         <div class="blue_row">	
+                    		<div class="td1" style="width:100%; text-align:center">No Records Found</div>
+                    	</div>	
+                        <!-- start blue_row -->
+                    	<!-- <div class="blue_row">
+							<div class="td1">10/12/2011</div>
+                            <div class="td2">Howser, Doogie</div>
+                            <div class="td3">Sacred Heart</div>
+                            <div class="td4">PA Intake</div>
+                            <div class="td4">10/12/2011</div>
+                            <div class="td5">Account Deactivated</div>
+                            <div class="td6"><a href="#">Details</a></div>
+                            <div class="clear"></div>
+                        </div> -->
+                        <!-- end blue_row -->
+                        </div>
+                        <!-- end white_box -->
+                    </div>
+                    <!-- end tab_content -->
+                </div>
+                <!-- end history_box -->
+            </div>
+            <!-- end info -->
+            <div class="clear"></div>
+    	</div>	
+    	<!-- end detail_box -->
+	<?php echo $this->Form->hidden('Provider.id'); ?> 
+    </form>
+    <div class="clear"></div>

@@ -1,0 +1,98 @@
+<!-- start tabblock -->
+        <div class="tab_block2">
+        	<!-- start tab_nav -->
+            <div class="tab_nav">
+            	<ul>
+                	<li><a href="/Patients/index"><?php echo $this->Html->image('ico_patents.png', array('alt' => 'Patients'));?> Patients</a></li>
+                    <li><a href="/Facilities/index" class="active"><?php echo $this->Html->image('ico_facilities.png', array('alt' => 'Facilities'));?>Facilities</a></li>           
+                    <li><a href="/Providers/index"><?php echo $this->Html->image('ico_providers.png', array('alt' => 'Providers'));?>Providers</a></li>
+                </ul>
+             </div>	
+             <!-- end tab_nav -->
+             <!-- tab content -->
+             <div class="tab_block2_content">
+             	<!-- tab left -->
+                <div class="tab_block2_left">
+                <form action="/Facilities/index" class="search" method="post" name="searchFilter">
+                <div>
+                	<!-- row1 -->
+                    <div class="row1">
+                    	<label for="field1">Search</label>
+                        <input type="text" name="field" id="field1" value="" class="input1" />
+                        <input type="button" name="search" value="" class="button1" onClick="document.searchFilter.submit();"/>
+                    </div>
+                    <!-- row1 -->
+                    <!-- row2 -->
+                    <div class="row1">
+                    	<label for="listmenu1">Filter</label>
+                    	<?php
+							echo $this->Form->input('states', array(
+    							'options' => $states,
+								'class' => 'list',
+								'div' => false,
+								'label' => false,
+   								'empty' => 'All States'));
+						?>
+                    </div>
+                    <!-- row2 -->
+                    <!-- row3 -->
+                    <div class="row1">
+                    	<label for="listmenu2">Filter</label>
+                        <?php
+							echo $this->Form->input('regions', array(
+    							'options' => $regions,
+								'class' => 'list',
+								'div' => false,
+								'label' => false,
+   								'empty' => 'All Regions'));
+						?>
+                    </div>
+                    <!-- row3 -->
+                    <!-- row4 -->
+                    <div class="row1">
+                    	<label for="check" class="check"><input type="checkbox" name="inactive" id="inactive" class="left" /> Include Inactive</label>
+                    </div>
+                    <!-- row4 -->
+                    <input type="button" name="add" value="" class="button2" onClick="document.location.href='/Facilities/Edit/0';"/>
+                </div>
+                </form>
+                </div>
+                <!-- tab left -->
+                <!-- tab right -->
+                <div class="tab_block2_right">
+                	<!-- th1 -->
+                    <div class="th1">	
+                    	<div class="td2" style="width:142px;"><span class="arrow">Name</span></div>
+                        <div class="td2">City</div>
+                        <div class="td3" style="width:30px;">State</div>
+                        <div class="td1" style="width:60px;">Region</div>
+                        <div class="td4" style="width:260px;">Phone</div>
+                    </div>
+                    <!-- th1 -->
+                    <div class="table_box">
+                    <!-- tr1 -->
+                    <?php if (empty($facilities)): ?>
+                    <div class="tr1">	
+                    	<div class="td1" style="width:100%; text-align:center">No Records Found</div>
+                    </div>
+                    <?php endif; ?>
+                    <?php foreach($facilities as $facility) : ?>
+                    <div class="tr1">	
+                    	<div class="td2 td5" style="width:142px;" title="<?php echo $facility['Facility']['name']; ?>"><?php echo ucwords(strtolower(substr($facility['Facility']['name'],0,22))); ?></div>
+                        <div class="td2 td7"><?php echo ucwords(strtolower($facility['Facility']['city'])); ?></div>
+                        <div class="td3 td8" style="width:30px;"><?php echo $facility['Facility']['state']; ?></div>
+                        <div class="td1 td8" style="width:60px;"><?php echo $facility['Region']['name']; ?></div>
+                        <div class="td4 td8" style="width:260px;">
+                         	<?php echo $facility['Facility']['phone']; ?>&nbsp;&nbsp;<a href="/Facilities/Edit/<?php echo $facility['Facility']['id']; ?>">Details</a>&nbsp;&nbsp;<a href="#">Create Log</a>&nbsp;&nbsp;<a href="#">Add Chat</a>
+                        </div>
+                    </div>
+                    <?php endforeach; ?>
+                </div>
+                <!-- end table box -->
+                </div>
+                <!-- tab right -->
+             </div>
+             <!-- tab content -->
+        <div class="clear"></div>
+        </div>
+        <!-- end tabblock -->

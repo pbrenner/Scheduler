@@ -1,0 +1,313 @@
+<script type="text/javascript">
+$().ready(function() {
+	// validate signup form on keyup and submit
+	$("#PatientEditForm").validate({
+		  rules: {
+			  PatientPaPreauth: {
+			      min: 0
+			    }
+			  }
+			});
+	
+/* 	$(function($){
+		$("#FacilityPhone").mask("(999) 999-9999");
+		$("#FacilityFax").mask("(999) 999-9999");
+	}); */
+});
+</script>
+<?php echo $this->Form->create('Patient', array('name'=>'PatientEdit'));?>
+
+		<!-- start detail_box -->
+		<div class="detail_box">
+        	<?php echo $this->element('titleBar', array('returnLink' => '/Patients/Index', 'title'=>'Patient Details')); ?>
+            <!-- start info -->
+            <div class="info">
+            <form action="">
+        	<div>
+            	<!-- start identy -->
+            	<div class="identy">
+                	<!-- start row -->
+                	<div class="row">
+                    	<div class="td1">
+                			<label>Last</label>
+                    		  <?php echo $this->Form->input('Patient.last_name',array('class' =>'input required',
+                			 											   			   'div'   => FALSE,
+                			 											   			   'label' => FALSE)); ?>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                    <!-- start row -->
+                	<div class="row">
+                    	<div class="td1">
+                			<label>First</label>
+                    		<?php echo $this->Form->input('Patient.first_name',array('class' =>'input required',
+                			 											   			   'div'   => FALSE,
+                			 											   			   'label' => FALSE)); ?>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                    <!-- start row -->
+                	<div class="row">
+                    	<div class="td2">
+                			<label>MI</label>
+							<?php echo $this->Form->input('Patient.middle_initial',array('class' =>'input',
+                			 											   			   'div'   => FALSE,
+                			 											   			   'label' => FALSE)); ?>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                    <!-- start row -->
+                	<div class="row">
+                    	<div class="td3">
+                			<label>Gender</label>
+                    		<?php echo $this->Form->input('Patient.gender',array(
+																		   'options' => $gender, 
+                			 											   'class' =>'select required',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE,
+																		   'empty' => 'Gender'));
+							?>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                    <!-- start row -->
+                	<div class="row">
+                    	<div class="td4">
+                			<label>Facility</label>
+                    		<?php echo $this->Form->input('Patient.facility_id',array('options' => $facilities, 
+                			 											   			 'class' =>'select required',
+                			 											   			 'div'   => FALSE,
+                			 											   			 'label' => FALSE,
+                			 											   			 'empty' => 'Facility'));
+							?>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                    <!-- start row -->
+                	<div class="row">
+                    	<div class="td5">
+                			<label>Room</label>
+                    		<?php echo $this->Form->input('Patient.room',array('class' =>'input',
+                			 											   			   'div'   => FALSE,
+                			 											   			   'label' => FALSE)); ?>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                </div>
+                <!-- end identy -->
+                <div class="clear"></div>
+                <!-- start category -->
+                <div class="category">
+                	<div class="insurance">
+                    	<h4>Insurance</h4>
+                        <label>1st</label>
+                        	<?php echo $this->Form->input('Patient.primary_insurance_id',array('options' => $insurance, 
+                			 											   			           'class' =>'selected required',
+                			 											   			           'div'   => FALSE,
+                			 											   			           'label' => FALSE,
+                			 											   			           'empty' => 'Primary Insurance'));
+							?>
+                        <div class="clear"></div>
+                        <label>2nd</label>
+                        <?php echo $this->Form->input('Patient.secondary_insurance_id',array('options' => $insurance, 
+                			 											   			           'class' =>'selected',
+                			 											   			           'div'   => FALSE,
+                			 											   			           'label' => FALSE,
+                			 											   			           'empty' => 'Secondary Insurance'));
+							?>
+                        <div class="clear"></div>
+                        <label>3rd</label>
+                        <?php echo $this->Form->input('Patient.tertiary_insurance_id',array('options' => $insurance, 
+                			 											   			           'class' =>'selected',
+                			 											   			           'div'   => FALSE,
+                			 											   			           'label' => FALSE,
+                			 											   			           'empty' => 'Tertiary Insurance'));
+							?>
+                    </div>
+                    <div class="consent">
+                    	<label>Face Sheet</label>
+                        <?php echo $this->Form->input('Patient.face_status',array('options' => $faceStatus, 
+                			 											   			           'class' =>'selected',
+                			 											   			           'div'   => FALSE,
+                			 											   			           'label' => FALSE));
+							?>
+                        <div class="clear"></div>
+                        <input name="" type="checkbox" value="" class="checkbox" />
+                        <span>Orders Complete</span>
+                        <div class="clear"></div>
+                        <label>Consent</label>
+                        <select class="selected"><option></option></select>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="id">
+                    	<label>Allscripts ID</label>
+                        <div class="clear"></div>
+                        <?php echo $this->Form->text('Patient.allscripts_id',array('class' =>'input',
+                			 											   			   'div'   => FALSE,
+                			 											   			   'label' => FALSE)); ?>
+                        <div class="clear"></div>
+                        <?php echo $this->Form->input('Patient.billing_info_complete',array('class' =>'checkbox',
+                			 											   			   'div'   => FALSE,
+                			 											   			   'label' => FALSE,
+																					   'value' => '1')); ?>
+                        <span>Billing Info Complete</span>
+                    </div>
+                    <div class="type">
+                    	<label>Stay Type</label>
+                        <div class="clear"></div>
+                        <select class="selected"><option></option></select>
+                        <div class="clear"></div>
+                        <div class="row">
+                        	<label>SN Start</label>
+                        	<input name="" type="text" value="" class="input" />
+                        </div>
+                        <div class="row">
+                        <label>Est. Days Left</label>
+                        <input name="" type="text" value="" class="input" />
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <!-- end category -->
+                <!-- start services_box -->
+                <div class="services_box">
+                	<div class="service">
+                		<h5>Services</h5>
+                        <div class="td1">
+                        	<?php echo $this->Html->image('img_pic1.gif', array('alt' => 'PA', 'title'=>'Psychiatry'));?>
+                        	<?php echo $this->Html->image('img_pic3.gif', array('alt' => 'NPA', 'title'=>'NP/PA Psychiatry'));?>
+                        	<?php echo $this->Html->image('img_pic5.gif', array('alt' => 'PO', 'title'=>'Psychology'));?>
+                        	<?php echo $this->Html->image('img_pic7.gif', array('alt' => 'SW', 'title'=>'Social Work'));?>
+                        </div>
+                        <div class="td2">
+                        	<label>Status</label>
+                            <?php echo $this->Form->input('Patient.pa_status',array('options' => $servicesStatus,
+                			 											   		    'class' =>'selected',
+                			 											   		    'div'   => FALSE,
+                			 											   		    'label' => FALSE,
+                			 											   		    'empty' => ''));
+							?>
+                            <?php echo $this->Form->input('Patient.po_status',array('options' => $servicesStatus,
+                			 											   		    'class' =>'selected',
+                			 											   		    'div'   => FALSE,
+                			 											   		    'label' => FALSE,
+                			 											   		    'empty' => ''));
+							?>
+							<?php echo $this->Form->input('Patient.sw_status',array('options' => $servicesStatus,
+                			 											   		    'class' =>'selected',
+                			 											   		    'div'   => FALSE,
+                			 											   		    'label' => FALSE,
+                			 											   		    'empty' => ''));
+							?>
+							<?php echo $this->Form->input('Patient.npa_status',array('options' => $servicesStatus,
+                			 											   		     'class' =>'selected',
+                			 											   		     'div'   => FALSE,
+                			 											   		     'label' => FALSE,
+                			 											   		     'empty' => ''));
+							?>
+                        </div>
+                        <div class="td3">
+                        	<label>Pre-Auth</label>
+                            <?php echo $this->Form->text('Patient.pa_preauth',array('class' =>'input number min(0)',
+                			 											   			   'div'   => FALSE,
+                			 											   			   'label' => FALSE)); ?>
+                            <?php echo $this->Form->text('Patient.po_preauth',array('class' =>'input',
+                			 											   			   'div'   => FALSE,
+                			 											   			   'label' => FALSE)); ?>
+                            <?php echo $this->Form->text('Patient.sw_preauth',array('class' =>'input',
+                			 											   			   'div'   => FALSE,
+                			 											   			   'label' => FALSE)); ?>
+                            <?php echo $this->Form->text('Patient.npa_preauth',array('class' =>'input',
+                			 											   			   'div'   => FALSE,
+                			 											   			   'label' => FALSE)); ?>
+                        </div>
+                        <div class="td4">
+                        	<label>Referal</label>
+                            <input name="" type="text" value="" class="input" />
+                            <input name="" type="text" value="" class="input" />
+                            <input name="" type="text" value="" class="input" />
+                            <input name="" type="text" value="" class="input" />
+                        </div>
+                        <div class="td4">
+                        	<label>90801</label>
+                            <input name="" type="text" value="" class="input" />
+                            <input name="" type="text" value="" class="input" />
+                            <input name="" type="text" value="" class="input" />
+                            <input name="" type="text" value="" class="input" />
+                        </div>
+                        <div class="td5">
+                        	<label>Visit Count</label>
+                            <input name="" type="text" value="" class="input" />
+                            <input name="" type="text" value="" class="input" />
+                        </div>
+                        <div class="td6">
+                        	<label>Treatment Plan</label>
+                            <div class="clear"></div>
+                            <select class="select"><option></option></select>
+                            <select class="select"><option></option></select>
+                        </div>
+                	</div>
+                    <div class="notes">
+                    	<label>Notes</label>
+                        <?php echo $this->Form->textarea('Patient.notes',array('class' =>'textarea',
+                			 											   			   'div'   => FALSE,
+                			 											   			   'label' => FALSE)); ?>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <!-- end services_box -->
+                </div>
+                <!-- start history_box -->
+                <div class="history_box">
+                	<!-- start tab_nav -->
+                	<div class="tab_nav">
+                    	<ul>
+                        	<li><a href="#" class="active">History</a></li>
+                        	<li><a href="#">Attachments</a></li>
+                        </ul>
+                    </div>	
+                    <!-- end tab_nav -->
+                    <div class="clear"></div>
+                    <!-- start tab_content -->
+                    <div class="tab_content">
+                    	<!-- start blue_row -->
+                    	<div class="blue_row">
+                        	<div class="td1">Date</div>
+                            <div class="td2">Provider</div>
+                            <div class="td3">Facility</div>
+                            <div class="td4">Proc Codes</div>
+                            <div class="td4">F/U Date</div>
+                            <div class="td5">Action</div>
+                            <div class="clear"></div>
+                        </div>
+                        <!-- end blue_row -->
+                        <!-- start white_box -->
+                        <div class="white_box">
+                        <div class="blue_row">	
+                    		<div class="td1" style="width:100%; text-align:center">No Records Found</div>
+                    	</div>
+                        <!-- start blue_row -->
+                    	<!-- <div class="blue_row">
+							<div class="td1">10/12/2011</div>
+                            <div class="td2">Howser, Doogie</div>
+                            <div class="td3">Sacred Heart</div>
+                            <div class="td4">PA Intake</div>
+                            <div class="td4">10/12/2011</div>
+                            <div class="td5">Account Deactivated</div>
+                            <div class="td6"><a href="#">Details</a></div>
+                            <div class="clear"></div>
+                        </div> -->
+                        <!-- end blue_row -->
+                        </div>
+                        <!-- end white_box -->
+                    </div>
+                    <!-- end tab_content -->
+                </div>
+                <!-- end history_box -->
+            </div>
+            <!-- end info -->
+            <div class="clear"></div>
+    	</div>	
+    	<!-- end detail_box -->
+   	 <?php echo $this->Form->hidden('Patient.id'); ?> 
+    </form>

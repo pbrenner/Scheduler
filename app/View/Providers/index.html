@@ -1,0 +1,98 @@
+<!-- start tabblock -->
+        <div class="tab_block2">
+        	<!-- start tab_nav -->
+            <div class="tab_nav">
+            	<ul>
+                	<li><a href="/Patients/index"><?php echo $this->Html->image('ico_patents.png', array('alt' => 'Patients'));?> Patients</a></li>
+                    <li><a href="/Facilities/index"><?php echo $this->Html->image('ico_facilities.png', array('alt' => 'Facilities'));?>Facilities</a></li>           
+                    <li><a href="/Providers/index" class="active"><?php echo $this->Html->image('ico_providers.png', array('alt' => 'Providers'));?>Providers</a></li>
+                </ul>
+             </div>	
+             <!-- end tab_nav -->
+             <!-- tab content -->
+             <div class="tab_block2_content">
+             	<!-- tab left -->
+                <div class="tab_block2_left">
+                 <form action="/Providers/index" class="search" method="post" name="searchFilter">
+                <div>
+                	<!-- row1 -->
+                    <div class="row1">
+                    	<label for="field1">Search</label>
+                        <input type="text" name="field" id="field1" value="" class="input1" />
+                        <input type="button" name="search" value="" class="button1" onClick="document.searchFilter.submit();"/>
+                    </div>
+                    <!-- row1 -->
+                    <!-- row2 -->
+                    <div class="row1">
+                    	<label for="listmenu1">Filter</label>
+                    	<?php
+							echo $this->Form->input('regions', array(
+    							'options' => $regions,
+								'class' => 'list',
+								'div' => false,
+								'label' => false,
+   								'empty' => 'All Regions'));
+						?>
+                    </div>
+                    <!-- row2 -->
+                    <!-- row3 -->
+                    <div class="row1">
+                    	<label for="listmenu2">Filter</label>
+                        <?php
+							echo $this->Form->input('services', array(
+    							'options' => $services,
+								'class' => 'list',
+								'div' => false,
+								'label' => false,
+   								'empty' => 'All Services'));
+						?>
+                    </div>
+                    <!-- row3 -->
+                    <!-- row4 -->
+                    <div class="row1">
+                    	<label for="check" class="check"><input type="checkbox" name="check" id="check" class="left" /> Include Inactive</label>
+                    </div>
+                    <!-- row4 -->
+                    <input type="button" name="add" value="" class="button2" onClick="document.location.href='/Providers/Edit/0';"/>
+                </div>
+                </form>
+                </div>
+                <!-- tab left -->
+                <!-- tab right -->
+                <div class="tab_block2_right">
+                	<!-- th1 -->
+                    <div class="th1">	
+                    	<div class="td2"><span class="arrow">Name</span></div>
+                        <div class="td2" style="width:30px;">Title</div>
+                        <div class="td1" style="width:83px;">Phone</div>
+                        <div class="td2" style="width:113px;">Email</div>
+                        <div class="td4" style="width:206px;">Last Payroll</div>
+                    </div>
+                    <!-- th1 -->
+                    <div class="table_box">
+                    <!-- tr1 -->
+                    <?php if (empty($providers)): ?>
+                    <div class="tr1">	
+                    	<div class="td1" style="width:100%; text-align:center">No Records Found</div>
+                    </div>
+                    <?php endif; ?>
+                    <?php foreach($providers as $provider) : ?>
+                    <div class="tr1">	
+                    	<div class="td2 td5"><?php echo $provider['Provider']['last_name'] . ", " . $provider['Provider']['first_name']; ?></div>
+                        <div class="td2 td7" style="width:30px;"><?php echo $provider['Provider']['title']; ?></div>
+                        <div class="td1 td8" style="width:107px;padding-left:0px;padding-right:0px;"><?php echo $provider['Provider']['phone']; ?></div>
+                        <div class="td2 td8" style="width:113px;"><?php echo $provider['Provider']['email']; ?></div>
+                        <div class="td4 td8" style="width:206px;">
+                        <?php echo $provider['Provider']['last_payroll_date']; ?>&nbsp;&nbsp;<a href="/Providers/Edit/<?php echo $provider['Provider']['id']; ?>">Details</a>&nbsp;&nbsp;<a href="#">PVF</a>&nbsp;&nbsp;<a href="#">Payroll</a></span>
+                        </div>
+                    </div>
+                    <?php endforeach; ?>
+                </div>
+                <!-- end table box -->
+                </div>
+                <!-- tab right -->
+             </div>
+             <!-- tab content -->
+        <div class="clear"></div>
+        </div>
+        <!-- end tabblock -->

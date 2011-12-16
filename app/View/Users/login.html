@@ -1,0 +1,45 @@
+<script type="text/javascript">
+$().ready(function() {
+
+	// validate signup form on keyup and submit
+$("#UserLoginForm").validate();
+});
+</script>
+<style type="text/css">
+#UserLoginForm label.error {
+	margin-left: 10px;
+	width: auto;
+	display: inline;
+	float: none;
+}
+
+</style>
+<!-- start box -->
+<div class="box">
+	<!-- start detail_box -->
+	<div class="detail_box"> 
+		<h2>Login</h2>
+		<!-- start info -->
+		<div class="info">
+			
+			<div class="users form">
+<?php echo $this->Form->create('User');?>
+    <fieldset>
+        <legend><?php echo __('Please enter your username and password'); ?></legend>
+    <?php
+        echo $this->Form->input('username',array('id'=>'username', 'class'=>'required'));
+        echo $this->Form->input('password',array('id'=>'password', 'class'=>'required'));
+    ?>
+    </fieldset>
+<?php echo $this->Form->end(__('Login'));?>
+</div>
+			
+			
+			
+		</div>
+		<!-- end info -->
+		<div class="clear"></div>
+	</div>	
+	<!-- end detail_box -->
+</div>
+<!-- end box -->

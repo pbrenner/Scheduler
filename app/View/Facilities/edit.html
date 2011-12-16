@@ -1,0 +1,277 @@
+<script type="text/javascript">
+$().ready(function() {
+	// validate signup form on keyup and submit
+	$("#FacilityEditForm").validate();
+	
+	$(function($){
+		$("#FacilityPhone").mask("(999) 999-9999");
+		$("#FacilityFax").mask("(999) 999-9999");
+	});
+});
+</script>
+	<?php echo $this->Form->create('Facility', array('name'=>'facilityEdit'));?>
+		<!-- start detail_box -->
+		<div class="detail_box">
+		<?php echo $this->element('titleBar', array('returnLink' => '/Facilities/Index', 'title'=>'Facility Details')); ?>
+            <!-- start info -->
+            <div class="info">
+        	<div>
+            	<!-- start identy -->
+            	<div class="editTable border_bottom">
+                	<!-- start cell -->
+                	<div class="row">
+                    	<div class="td5 start">
+                			<label>Name</label>
+                			 <?php echo $this->Form->input('Facility.name',array('id'    =>'FacilityName', 
+                			 											   'class' =>'input required',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE,
+																		   'style'=>'width: 193px;'));
+							?>
+                        </div>
+                    </div>
+                    <!-- end cell -->
+                    <!-- start cell -->
+                	<div class="row">
+                    	<div class="td2">
+                			<label>Abbreviation</label>
+                    		<?php echo $this->Form->input('Facility.abbreviation',
+														array('id'    =>'FacilityAbbreviation', 
+                			 								  'class' =>'input required',
+                			 								  'div'   => FALSE,
+                			 								  'label' => FALSE,
+															  'style'=>'width: 73px;'));
+							?>
+                        </div>
+                    </div>
+                    <!-- end cell -->
+                    <!-- start cell -->
+                	<div class="row">
+                    	<div class="td5">
+                			<label>Contact</label>
+                    		<?php echo $this->Form->input('Facility.contact_name',
+														array('id'    =>'FacilityContactName', 
+                			 								  'class' =>'input',
+                			 								  'div'   => FALSE,
+                			 								  'label' => FALSE,
+															  'style'=>'width: 193px;'));
+							?>
+                        </div>
+                    </div>
+                    <!-- end cell -->
+                </div>
+                <div class="editTable">
+                	<!-- start cell -->
+                	<div class="row">
+                    	<div class="td5 start">
+                			<label>Address Line 1</label>
+                			 <?php echo $this->Form->input('Facility.address_line1',array('id'    =>'FacilityAddressLine1', 
+                			 											   'class' =>'input required',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE,
+																		   'style'=>'width: 193px;'));
+							?>
+                        </div>
+                    </div>
+                    <!-- end cell -->
+                    <!-- start cell -->
+                	<div class="row">
+                    	<div class="td5 start">
+                			<label>Address Line 2</label>
+                			 <?php echo $this->Form->input('Facility.address_line2',array('id'    =>'FacilityAddressLine2', 
+                			 											   'class' =>'input',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE,
+																		   'style'=>'width: 193px;'));
+							?>
+                        </div>
+                    </div>
+                    <!-- end cell -->
+                    <!-- start cell -->
+                	<div class="row">
+                    	<div class="td3 start">
+                			<label>City</label>
+                			 <?php echo $this->Form->input('Facility.city',array('id'    =>'FacilityCity', 
+                			 											   'class' =>'input required',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE,
+																		   'style'=>'width: 113px;'));
+							?>
+                        </div>
+                    </div>
+                    <!-- end cell -->
+                    <!-- start cell -->
+                	<div class="row">
+                    	<div class="td3 start">
+                			<label>State</label>
+                			 <?php echo $this->Form->input('Facility.state',array('id'    =>'FacilityState',
+																		   'options' => $states, 
+                			 											   'class' =>'selected required',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE,
+																		   'style'=>'width: 113px;'));
+							?>
+                        </div>
+                    </div>
+                    <!-- end cell -->
+                    <!-- start cell -->
+                	<div class="row">
+                    	<div class="td2 start">
+                			<label>Postal Code</label>
+                			 <?php echo $this->Form->input('Facility.postal_code',array('id'    =>'FacilityPostalCode',
+                			 											   'class' =>'input required',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE,
+																		   'style'=>'width: 73px;'));
+							?>
+                        </div>
+                    </div>
+                    <!-- end cell -->
+                </div>
+                <div class="clear" style="height:9px;"></div>
+                <div class="editTable border_bottom">
+                	<!-- start cell -->
+                	<div class="row">
+                    	<div class="td5 start">
+                			<label>Phone</label>
+                			 <?php echo $this->Form->input('Facility.phone',array('id'    =>'FacilityPhone', 
+                			 											   'class' =>'input phone',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE,
+																		   'style'=>'width: 193px;'));
+							?>
+                        </div>
+                    </div>
+                    <!-- end cell -->
+                    <!-- start cell -->
+                	<div class="row">
+                    	<div class="td5 start">
+                			<label>Fax</label>
+                			 <?php echo $this->Form->input('Facility.fax',array('id'    =>'FacilityFax', 
+                			 											   'class' =>'input',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE,
+																		   'style'=>'width: 193px;'));
+							?>
+                        </div>
+                    </div>
+                    <!-- end cell -->
+                    <!-- start cell -->
+                	<div class="row">
+                    	<div class="td5">
+                			<label>Contact Email</label>
+                			 <?php echo $this->Form->input('Facility.contact_email',array('id'    =>'FacilityEmail',
+                			 											   'class' =>'input email',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE,
+																		   'style'=>'width: 193px;'));
+							?>
+                        </div>
+                    </div>
+                    <!-- end cell -->
+                </div>
+                <div class="editTable border_bottom">
+                	<!-- start cell -->
+                	<div class="row">
+                    	<div class="td2 start">
+                			<label>Beds</label>
+                			 <?php echo $this->Form->text('Facility.beds',array('id'=>'FacilityBeds', 
+                			 											   'class' =>'input required',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE,
+																		   'style'=>'width: 73px;'));
+							?>
+                        </div>
+                    </div>
+                    <!-- end cell -->
+                    <!-- start cell -->
+                	<div class="row">
+                    	<div class="td4 start">
+                			<label>Region</label>
+                			 <?php
+								echo $this->Form->input('Facility.region_id', array(
+    													'options' => $regions,
+														'class' =>'selected required',
+														'div' => false,
+														'label' => false,
+   														'empty' => 'Region',
+														'style'=>'width: 153px;'));
+								?>
+                        </div>
+                    </div>
+                    <!-- end cell -->
+                    
+                    <!-- start cell -->
+                	<div class="row">
+                    	<div class="td3">
+                			<label>Status</label>
+                			 <?php
+								echo $this->Form->input('Facility.status', array(
+    													'options' => $status,
+														'class' =>'selected required',
+														'div' => false,
+														'label' => false,
+   														'empty' => 'Status',
+														'style'=>'width: 113px;'));
+								?>
+                        </div>
+                    </div>
+                    <!-- end cell -->
+                </div><br/>
+                <!-- start history_box -->
+                <div class="history_box">
+                	<!-- start tab_nav -->
+                	<div class="tab_nav">
+                    	<ul>
+                        	<li><a href="#" class="active">Visits</a></li>
+                        	<li><a href="#">Contacts</a></li>
+                        	<li><a href="#">Chats</a></li>
+                        </ul>
+                    </div>	
+                    <!-- end tab_nav -->
+                    <div class="clear"></div>
+                    <!-- start tab_content -->
+                    <div class="tab_content">
+                    	<!-- start blue_row -->
+                    	<div class="blue_row">
+                        	<div class="td1">Date</div>
+                            <div class="td2">Provider</div>
+                            <div class="td3">Facility</div>
+                            <div class="td4">Proc Codes</div>
+                            <div class="td4">F/U Date</div>
+                            <div class="td5">Action</div>
+                            <div class="clear"></div>
+                        </div>
+                        <!-- end blue_row -->
+                        <!-- start white_box -->
+                        <div class="white_box">
+                        <div class="blue_row">	
+                    		<div class="td1" style="width:100%; text-align:center">No Records Found</div>
+                    	</div>
+                        	
+                        <!-- start blue_row -->
+                    	<!-- <div class="blue_row">
+							<div class="td1">10/12/2011</div>
+                            <div class="td2">Howser, Doogie</div>
+                            <div class="td3">Sacred Heart</div>
+                            <div class="td4">PA Intake</div>
+                            <div class="td4">10/12/2011</div>
+                            <div class="td5">Account Deactivated</div>
+                            <div class="td6"><a href="#">Details</a></div>
+                            <div class="clear"></div>
+                        </div> -->
+                        <!-- end blue_row -->
+                        </div>
+                        <!-- end white_box -->
+                    </div>
+                    <!-- end tab_content -->
+                </div>
+                <!-- end history_box -->
+            </div>
+            <!-- end info -->
+            <div class="clear"></div>
+    	</div>	
+    	<!-- end detail_box -->
+	<?php echo $this->Form->hidden('Facility.id'); ?> 
+    </form>
+    <div class="clear"></div>
