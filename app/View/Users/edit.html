@@ -12,18 +12,17 @@
 	<!-- start detail_box -->
 	<?php echo $this->Form->create('User', array('id'=>'editform'));?>
 	<div class="detail_box">
-		<?php echo $this->element('titleBar', array('returnLink' => '/Patients/Index', 'title'=>'User Profile')); ?>
+		<?php echo $this->element('titleBar', array('returnLink' => '/Patients/Index', 'title'=>'User Profile', 'save'=>TRUE)); ?>
 		<!-- start info -->
 		<div class="info">
 			<div class="error" style="display:none;color: red;height:30px;font-weight:bold;font-size:14px;">
       		<img src="/img/warning.gif" alt="Warning!" width="24" height="24" style="float:left; margin: -5px 10px 0px 0px; ">
-
-      			<span></span>.<br clear="all">
+      			<span></span><br clear="all">
     		</div>
 			<div class="users form">
 				<fieldset>
 					<div class="input text required">
-						<label for="UserOffice" style="text-align:left;">Office:</label>
+						<label for="UserOffice" style="text-align:left;">Office Location:</label>
 						<?php echo $this->request->data['Office']['name']; ?>
 					</div>
 					<div class="input text required">

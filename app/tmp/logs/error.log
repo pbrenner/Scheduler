@@ -431,3 +431,626 @@
 #9 /Users/Peter/dev/wittinginnovation.com/Sites/BCS-Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest), Object(CakeResponse))
 #10 /Users/Peter/dev/wittinginnovation.com/Sites/BCS-Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #11 {main}
+2011-12-16 12:48:12 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-16 12:48:16 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-16 12:48:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-16 12:53:08 Error: [MissingActionException] Action PatientsController::view() could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2011-12-16 14:12:47 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-16 14:12:50 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-16 14:12:51 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-16 14:12:58 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-16 14:13:00 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-16 14:37:53 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-16 14:39:06 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-16 14:39:58 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-16 14:39:59 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-16 14:40:02 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-16 14:40:07 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-16 14:40:20 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-16 14:41:23 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-16 14:41:36 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-16 14:43:12 Error: [MissingActionException] Action PatientsController::view() could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2011-12-16 20:02:47 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`scheduler`.`facilities`, CONSTRAINT `fk_facilities_companies` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(436): PDOStatement->execute(Array)
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(403): DboSource->_execute('UPDATE `facilit...', Array)
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/Database/Mysql.php(376): DboSource->execute('UPDATE `facilit...')
+#3 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Model.php(1614): Mysql->update(Object(Facility), Array, Array)
+#4 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/Controller/FacilitiesController.php(40): Model->save(Array)
+#5 [internal function]: FacilitiesController->edit('1')
+#6 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Controller/Controller.php(473): ReflectionMethod->invokeArgs(Object(FacilitiesController), Array)
+#7 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#8 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(FacilitiesController), Object(CakeRequest), Object(CakeResponse))
+#9 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2011-12-16 20:06:04 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-16 20:39:49 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-16 22:35:23 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`scheduler`.`patients`, CONSTRAINT `fk_patients_companies1` FOREIGN KEY (`company_id`) REFERENCES `companies` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(436): PDOStatement->execute(Array)
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(403): DboSource->_execute('INSERT INTO `pa...', Array)
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(967): DboSource->execute('INSERT INTO `pa...')
+#3 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Model.php(1629): DboSource->create(Object(Patient), Array, Array)
+#4 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/Controller/PatientsController.php(43): Model->save(Array)
+#5 [internal function]: PatientsController->edit('0')
+#6 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Controller/Controller.php(473): ReflectionMethod->invokeArgs(Object(PatientsController), Array)
+#7 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#8 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest), Object(CakeResponse))
+#9 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2011-12-16 22:37:12 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-16 23:17:41 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Region.first_nameRegion.first_name' in 'field list'
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(436): PDOStatement->execute(Array)
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(403): DboSource->_execute('SELECT `Provide...', Array)
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(647): DboSource->execute('SELECT `Provide...', Array, Array)
+#3 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(1040): DboSource->fetchAll('SELECT `Provide...', false)
+#4 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Model.php(2460): DboSource->read(Object(AppModel), Array)
+#5 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/Controller/FacilitiesController.php(48): Model->find('list', Array)
+#6 [internal function]: FacilitiesController->edit('1')
+#7 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Controller/Controller.php(473): ReflectionMethod->invokeArgs(Object(FacilitiesController), Array)
+#8 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#9 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(FacilitiesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2011-12-16 23:18:07 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Provider.first_nameProvider.first_name' in 'field list'
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(436): PDOStatement->execute(Array)
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(403): DboSource->_execute('SELECT `Provide...', Array)
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(647): DboSource->execute('SELECT `Provide...', Array, Array)
+#3 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(1040): DboSource->fetchAll('SELECT `Provide...', false)
+#4 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Model.php(2460): DboSource->read(Object(AppModel), Array)
+#5 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/Controller/FacilitiesController.php(48): Model->find('list', Array)
+#6 [internal function]: FacilitiesController->edit('1')
+#7 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Controller/Controller.php(473): ReflectionMethod->invokeArgs(Object(FacilitiesController), Array)
+#8 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#9 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(FacilitiesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2011-12-16 23:18:52 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Provider.first_name Provider.first_name' in 'field list'
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(436): PDOStatement->execute(Array)
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(403): DboSource->_execute('SELECT `Provide...', Array)
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(647): DboSource->execute('SELECT `Provide...', Array, Array)
+#3 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(1040): DboSource->fetchAll('SELECT `Provide...', false)
+#4 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Model.php(2460): DboSource->read(Object(AppModel), Array)
+#5 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/Controller/FacilitiesController.php(48): Model->find('list', Array)
+#6 [internal function]: FacilitiesController->edit('1')
+#7 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Controller/Controller.php(473): ReflectionMethod->invokeArgs(Object(FacilitiesController), Array)
+#8 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#9 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(FacilitiesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2011-12-16 23:23:35 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.name FROM `providers` AS `Provider`   WHERE 1 = 1' at line 1
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(436): PDOStatement->execute(Array)
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(403): DboSource->_execute('SELECT `Provide...', Array)
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(647): DboSource->execute('SELECT `Provide...', Array, Array)
+#3 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(1040): DboSource->fetchAll('SELECT `Provide...', false)
+#4 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Model.php(2460): DboSource->read(Object(AppModel), Array)
+#5 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/Controller/FacilitiesController.php(48): Model->find('list', Array)
+#6 [internal function]: FacilitiesController->edit('1')
+#7 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Controller/Controller.php(473): ReflectionMethod->invokeArgs(Object(FacilitiesController), Array)
+#8 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#9 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(FacilitiesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2011-12-16 23:24:02 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.`name` FROM `providers` AS `Provider`   WHERE 1 = 1' at line 1
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(436): PDOStatement->execute(Array)
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(403): DboSource->_execute('SELECT `Provide...', Array)
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(647): DboSource->execute('SELECT `Provide...', Array, Array)
+#3 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(1040): DboSource->fetchAll('SELECT `Provide...', false)
+#4 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Model.php(2460): DboSource->read(Object(AppModel), Array)
+#5 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/Controller/FacilitiesController.php(48): Model->find('list', Array)
+#6 [internal function]: FacilitiesController->edit('1')
+#7 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Controller/Controller.php(473): ReflectionMethod->invokeArgs(Object(FacilitiesController), Array)
+#8 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#9 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(FacilitiesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2011-12-17 00:56:39 Error: [MissingActionException] Action PatientsController::view() could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2011-12-17 13:11:17 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-17 13:11:49 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-17 13:13:55 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-17 13:14:01 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-17 13:14:10 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-17 13:14:22 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-17 13:16:00 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 09:55:33 Error: [MissingActionException] Action AdminController::PaymentMethods() could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(AdminController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2011-12-18 09:55:59 Error: [MissingActionException] Action AdminController::PaymentMethods() could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(AdminController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2011-12-18 09:56:27 Error: [MissingActionException] Action AdminController::PaymentMethods() could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(AdminController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2011-12-18 10:47:33 Error: [MissingActionException] Action AdminController::PaymentMethod() could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(AdminController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2011-12-18 11:05:01 Error: [MissingActionException] Action AdminController::PaymentMethods() could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(AdminController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2011-12-18 11:16:20 Error: [MissingActionException] Action AdminController::PaymentMethod() could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(AdminController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2011-12-18 11:17:05 Error: [MissingControllerException] Controller class PaymentMethodController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 11:17:15 Error: [MissingActionException] Action AdminController::PaymentMethods() could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(AdminController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2011-12-18 11:17:49 Error: [MissingViewException] View file "/Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/View/PaymentMethods/admin__edit.html" is missing.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/View/View.php(363): View->_getViewFileName(NULL)
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Controller/Controller.php(900): View->render(NULL, NULL)
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(114): Controller->render()
+#3 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(PaymentMethodsController), Object(CakeRequest), Object(CakeResponse))
+#4 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2011-12-18 11:19:18 Error: [MissingActionException] Action PaymentMethodsController::index() could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(PaymentMethodsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2011-12-18 11:19:31 Error: [MissingActionException] Action PaymentMethodsController::index() could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(PaymentMethodsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2011-12-18 11:19:37 Error: [MissingActionException] Action PaymentMethodsController::admin_index() could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(PaymentMethodsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2011-12-18 11:19:52 Error: [MissingActionException] Action PaymentMethodsController::admin_index() could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(PaymentMethodsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2011-12-18 12:04:47 Error: [MissingActionException] Action PaymentMethodsController::admin_index() could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(PaymentMethodsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2011-12-18 12:04:48 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 12:05:51 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 12:05:58 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 12:10:12 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 12:10:28 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 12:10:47 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 12:11:35 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 12:11:42 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 12:11:58 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 12:18:03 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 12:19:28 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 12:28:47 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 12:30:22 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 12:46:27 Error: [MissingViewException] View file "/Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/View/PaymentTypes/admin_view.html" is missing.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/View/View.php(363): View->_getViewFileName(NULL)
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Controller/Controller.php(900): View->render(NULL, NULL)
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(114): Controller->render()
+#3 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(PaymentTypesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2011-12-18 12:47:18 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 12:47:26 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 12:47:34 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 12:50:10 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 13:16:33 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ServiceType.name' in 'field list'
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(436): PDOStatement->execute(Array)
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(403): DboSource->_execute('SELECT `Service...', Array)
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(647): DboSource->execute('SELECT `Service...', Array, Array)
+#3 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(1040): DboSource->fetchAll('SELECT `Service...', false)
+#4 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Model.php(2460): DboSource->read(Object(AppModel), Array)
+#5 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/Controller/ProviderTypesController.php(28): Model->find('list', Array)
+#6 [internal function]: ProviderTypesController->admin_edit('9')
+#7 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Controller/Controller.php(473): ReflectionMethod->invokeArgs(Object(ProviderTypesController), Array)
+#8 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#9 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(ProviderTypesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2011-12-18 13:16:49 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ServiceType.status' in 'where clause'
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(436): PDOStatement->execute(Array)
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(403): DboSource->_execute('SELECT `Service...', Array)
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(647): DboSource->execute('SELECT `Service...', Array, Array)
+#3 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(1040): DboSource->fetchAll('SELECT `Service...', false)
+#4 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Model.php(2460): DboSource->read(Object(AppModel), Array)
+#5 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/Controller/ProviderTypesController.php(28): Model->find('list', Array)
+#6 [internal function]: ProviderTypesController->admin_edit('9')
+#7 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Controller/Controller.php(473): ReflectionMethod->invokeArgs(Object(ProviderTypesController), Array)
+#8 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#9 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(ProviderTypesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2011-12-18 13:17:42 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 13:17:54 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 13:18:35 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 13:18:43 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 13:18:51 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'service_type_id' cannot be null
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(436): PDOStatement->execute(Array)
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(403): DboSource->_execute('INSERT INTO `pr...', Array)
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(967): DboSource->execute('INSERT INTO `pr...')
+#3 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Model.php(1629): DboSource->create(Object(ProviderType), Array, Array)
+#4 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/Controller/ProviderTypesController.php(19): Model->save(Array)
+#5 [internal function]: ProviderTypesController->admin_edit('0')
+#6 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Controller/Controller.php(473): ReflectionMethod->invokeArgs(Object(ProviderTypesController), Array)
+#7 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#8 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(ProviderTypesController), Object(CakeRequest), Object(CakeResponse))
+#9 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2011-12-18 13:30:01 Error: [MissingControllerException] Controller class VistStatusController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 13:30:40 Error: [MissingTableException] Database table visit_statuses for model VisitStatus was not found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Model.php(3238): Model->setSource('visit_statuses')
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Model.php(1206): Model->getDataSource()
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Model.php(1292): Model->schema()
+#3 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/Model/Behavior/who_did_it.php(48): Model->hasField('created_by')
+#4 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/BehaviorCollection.php(144): WhoDidItBehavior->setup(Object(VisitStatus), Array)
+#5 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/BehaviorCollection.php(67): BehaviorCollection->load('WhoDidIt', Array)
+#6 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Model.php(704): BehaviorCollection->init('VisitStatus', Array)
+#7 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Utility/ClassRegistry.php(136): Model->__construct(Array)
+#8 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Controller/Controller.php(670): ClassRegistry::init(Array)
+#9 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Controller/Controller.php(366): Controller->loadModel('VisitStatus')
+#10 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Controller/Controller.php(394): Controller->__isset('VisitStatus')
+#11 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/Controller/VisitStatusController.php(5): Controller->__get('VisitStatus')
+#12 [internal function]: VisitStatusController->admin_view()
+#13 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Controller/Controller.php(473): ReflectionMethod->invokeArgs(Object(VisitStatusController), Array)
+#14 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#15 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(VisitStatusController), Object(CakeRequest), Object(CakeResponse))
+#16 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2011-12-18 13:34:23 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 13:39:36 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 13:45:27 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 13:51:29 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ServiceTypes.name' in 'order clause'
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(436): PDOStatement->execute(Array)
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(403): DboSource->_execute('SELECT `Service...', Array)
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(647): DboSource->execute('SELECT `Service...', Array, Array)
+#3 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(1040): DboSource->fetchAll('SELECT `Service...', false)
+#4 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Model.php(2460): DboSource->read(Object(ServiceType), Array)
+#5 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/Controller/ServiceTypesController.php(5): Model->find('all', Array)
+#6 [internal function]: ServiceTypesController->admin_view()
+#7 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Controller/Controller.php(473): ReflectionMethod->invokeArgs(Object(ServiceTypesController), Array)
+#8 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#9 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(ServiceTypesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2011-12-18 13:52:22 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'ServiceTypes.service_type' in 'order clause'
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(436): PDOStatement->execute(Array)
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(403): DboSource->_execute('SELECT `Service...', Array)
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(647): DboSource->execute('SELECT `Service...', Array, Array)
+#3 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(1040): DboSource->fetchAll('SELECT `Service...', false)
+#4 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Model.php(2460): DboSource->read(Object(ServiceType), Array)
+#5 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/Controller/ServiceTypesController.php(5): Model->find('all', Array)
+#6 [internal function]: ServiceTypesController->admin_view()
+#7 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Controller/Controller.php(473): ReflectionMethod->invokeArgs(Object(ServiceTypesController), Array)
+#8 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#9 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(ServiceTypesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2011-12-18 13:57:39 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 13:57:50 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 13:58:37 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 13:59:02 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 14:05:20 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Department.service_type' in 'order clause'
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(436): PDOStatement->execute(Array)
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(403): DboSource->_execute('SELECT `Departm...', Array)
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(647): DboSource->execute('SELECT `Departm...', Array, Array)
+#3 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(1040): DboSource->fetchAll('SELECT `Departm...', false)
+#4 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Model.php(2460): DboSource->read(Object(Department), Array)
+#5 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/Controller/DepartmentsController.php(5): Model->find('all', Array)
+#6 [internal function]: DepartmentsController->admin_view()
+#7 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Controller/Controller.php(473): ReflectionMethod->invokeArgs(Object(DepartmentsController), Array)
+#8 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#9 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(DepartmentsController), Object(CakeRequest), Object(CakeResponse))
+#10 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2011-12-18 14:09:10 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 14:09:59 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 14:17:38 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'PayrollFrquency.name' in 'order clause'
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(436): PDOStatement->execute(Array)
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(403): DboSource->_execute('SELECT `Payroll...', Array)
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(647): DboSource->execute('SELECT `Payroll...', Array, Array)
+#3 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(1040): DboSource->fetchAll('SELECT `Payroll...', false)
+#4 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Model.php(2460): DboSource->read(Object(PayrollFrequency), Array)
+#5 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/Controller/PayrollFrequenciesController.php(7): Model->find('all', Array)
+#6 [internal function]: PayrollFrequenciesController->admin_view()
+#7 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Controller/Controller.php(473): ReflectionMethod->invokeArgs(Object(PayrollFrequenciesController), Array)
+#8 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#9 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(PayrollFrequenciesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2011-12-18 14:17:59 Error: [MissingViewException] View file "/Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/View/PayrollFrequencies/admin_view.html" is missing.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/View/View.php(363): View->_getViewFileName(NULL)
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Controller/Controller.php(900): View->render(NULL, NULL)
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(114): Controller->render()
+#3 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(PayrollFrequenciesController), Object(CakeRequest), Object(CakeResponse))
+#4 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2011-12-18 14:24:48 Error: [MissingControllerException] Controller class PayrollFrequencysController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 14:26:32 Error: [MissingControllerException] Controller class PayrollFrequencysController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 14:27:33 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 14:27:40 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 14:27:46 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 14:27:50 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 14:27:57 Error: [MissingControllerException] Controller class PayrollFrequnciesController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 14:28:39 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 14:57:09 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 14:57:14 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 14:57:34 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 14:57:42 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 14:58:02 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 14:58:06 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 14:59:47 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 15:00:21 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 15:00:51 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 15:00:57 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 15:01:29 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 15:02:16 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 15:02:21 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 15:02:25 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 15:03:38 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 15:03:55 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 15:04:01 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 15:04:15 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 15:07:33 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 15:07:40 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 15:07:45 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 15:08:02 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 15:10:08 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 15:10:14 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 15:11:24 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 15:15:53 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 15:15:59 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 15:16:05 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 15:22:18 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 15:22:27 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 15:22:37 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 15:23:02 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'DxCode.modified_by' in 'on clause'
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(436): PDOStatement->execute(Array)
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(403): DboSource->_execute('SELECT `DxCode`...', Array)
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(647): DboSource->execute('SELECT `DxCode`...', Array, Array)
+#3 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(1040): DboSource->fetchAll('SELECT `DxCode`...', false)
+#4 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Model.php(2460): DboSource->read(Object(DxCode), Array)
+#5 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/Controller/DxCodesController.php(11): Model->find('all', Array)
+#6 [internal function]: DxCodesController->admin_view()
+#7 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Controller/Controller.php(473): ReflectionMethod->invokeArgs(Object(DxCodesController), Array)
+#8 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#9 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(DxCodesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2011-12-18 15:23:05 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 15:23:28 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'DxCode.modified_by' in 'on clause'
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(436): PDOStatement->execute(Array)
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(403): DboSource->_execute('SELECT `DxCode`...', Array)
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(647): DboSource->execute('SELECT `DxCode`...', Array, Array)
+#3 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(1040): DboSource->fetchAll('SELECT `DxCode`...', false)
+#4 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Model.php(2460): DboSource->read(Object(DxCode), Array)
+#5 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/Controller/DxCodesController.php(11): Model->find('all', Array)
+#6 [internal function]: DxCodesController->admin_view()
+#7 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Controller/Controller.php(473): ReflectionMethod->invokeArgs(Object(DxCodesController), Array)
+#8 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#9 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(DxCodesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2011-12-18 15:28:33 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-18 15:32:32 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

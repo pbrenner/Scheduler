@@ -1,5 +1,7 @@
 <h2>
 	<a href="<?php echo $returnLink; ?>" title="Cancel - No Save"><?php echo $this->Html->image('ico_close.png', array('alt' => 'Cancel'));?></a>
+	<?php if ($save) : ?>
 	<?php echo $this->Form->image('Save', array('src'=>'/img/save.png','alt' => 'Close',  'title'=>'Save', 'style'=>'float: right;margin: 7px 8px 0 15px;'));?>
+	<?php endif; ?>
 	<?php echo $title; ?>
 </h2>

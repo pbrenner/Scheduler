@@ -13,7 +13,7 @@ $().ready(function() {
 	<?php echo $this->Form->create('Provider', array('name'=>'providerEdit'));?>
 		<!-- start detail_box -->
 		<div class="detail_box">
-			<?php echo $this->element('titleBar', array('returnLink' => '/Providers/Index', 'title'=>'Provider Details')); ?>
+			<?php echo $this->element('titleBar', array('returnLink' => '/Providers/Index', 'title'=>'Provider Details', 'save'=>TRUE)); ?>
             <!-- start info -->
             <div class="info">
         	<div>
@@ -53,26 +53,27 @@ $().ready(function() {
                     <!-- end row -->
                     <!-- start row -->
                 	<div class="row">
-                    	<div class="td2">
+                    	<div class="td1">
                 			<label>Title</label>
                     		<?php echo $this->Form->input('Provider.title',array( 'class' =>'input ',
                 			 											   'div'   => FALSE,
                 			 											   'label' => FALSE,
 																		   'empty' => 'Gender',
-                                                                           'style' =>'width:73px'));
+                                                                           'style' =>'width:33px'));
 							?>
                         </div>
                     </div>
                     <!-- end row -->
                     <!-- start row -->
                 	<div class="row">
-                    	<div class="td4">
+                    	<div class="td3">
                 			<label>Type</label>
                     		<?php echo $this->Form->input('Provider.provider_type_id',array('options' => $providerTypes, 
                 			 											   			 'class' =>'selected',
                 			 											   			 'div'   => FALSE,
                 			 											   			 'label' => FALSE,
-                			 											   			 'empty' => 'Provider Type'));
+                			 											   			 'empty' => 'Provider Type',
+																					 'style' =>'width:113px'));
 							?>
                         </div>
                     </div>
@@ -85,7 +86,23 @@ $().ready(function() {
                 			 											   			 'class' =>'selected',
                 			 											   			 'div'   => FALSE,
                 			 											   			 'label' => FALSE,
-                			 											   			 'empty' => 'Status'));
+                			 											   			 'empty' => 'Status',
+																					 'style' =>'width:113px'));
+							?>
+                        </div>
+                    </div>
+                    <!-- end row -->
+                    
+                    <!-- start row -->
+                	<div class="row">
+                    	<div class="td3">
+                			<label>Regions</label>
+                    		<?php echo $this->Form->input('Provider.status',array('options' => $regions, 
+                			 											   			 'class' =>'selected',
+                			 											   			 'div'   => FALSE,
+                			 											   			 'label' => FALSE,
+                			 											   			 'empty' => 'Region',
+																					 'style' =>'width:113px'));
 							?>
                         </div>
                     </div>
@@ -140,7 +157,21 @@ $().ready(function() {
                 </div>
                 <div class="clear" style="height:9px;"></div>
                 <div class="editTable border_bottom">
+                
                 	<!-- start cell -->
+                	<div class="row">
+                    	<div class="td4 start">
+                			<label>Current Pay Period Status</label>
+                			 <?php echo $this->Form->input('Provider.payperiod_status',array('options' => $payperiodStatus, 
+                			 											   'class' =>'input',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE));
+							?>
+                        </div>
+                    </div>
+                    <!-- end cell -->
+                    
+                    <!-- start cell -->
                 	<div class="row">
                     	<div class="td4 start">
                 			<label>Billing System Name</label>
@@ -152,7 +183,18 @@ $().ready(function() {
                         </div>
                     </div>
                     <!-- end cell -->
-                    <!-- start cell -->
+				</div>
+				<div class="clear" style="height:9px;"></div>
+				<?php if ($this->Security->hasRole('Payroll Assistant') || $this->Security->hasRole('Manage Payroll') ): ?>
+				<!-- Start Row -->
+                <div class="editTable">
+                	<p>Payroll Details
+                </div>
+                <!-- End Row -->
+                <div class="clear" style="height:9px;"></div>
+				<!-- Start Row -->
+                <div class="editTable">
+                	<!-- start cell -->
                 	<div class="row">
                     	<div class="td4 start">
                 			<label>Payroll Name</label>
@@ -163,18 +205,147 @@ $().ready(function() {
 							?>
                         </div>
                     </div>
-                    <!-- end cell -->
+                    <!-- End cell -->
                     <!-- start cell -->
-                    <div class="notes" style='padding-top:0px;margin-left: 173px;'>
-                    	<label>Notes</label>
-                        <?php echo $this->Form->textarea('Provider.notes',array('class' =>'textarea',
-                			 											   			   'div'   => FALSE,
-                			 											   			   'label' => FALSE)); ?>
+                	<div class="row">
+                    	<div class="td2">
+                			<label>Department</label>
+                			 <?php echo $this->Form->input('Provider.department',array( 
+                			 											   'class' =>'input',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE,
+																		   'style' =>'width:73px'));
+							?>
+                        </div>
                     </div>
-                    <!-- end cell -->
-                    <div class="clear"></div>
-                    
+                    <!-- End cell -->
+                    <!-- start cell -->
+                	<div class="row">
+                    	<div class="td1">
+                			<label>Key</label>
+                			 <?php echo $this->Form->input('Provider.payroll_key',array( 
+                			 											   'class' =>'input',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE,
+																		   'style' =>'width:33px'));
+							?>
+                        </div>
+                    </div>
+                    <!-- End cell -->
+                    <!-- start cell -->
+                	<div class="row">
+                    	<div class="td2" style="width:84px;">
+                			<label>Employee Type</label>
+                			 <?php echo $this->Form->input('Provider.payment_type_id',array('options'=>$paymentTypes,
+                			 											   'class' =>'input',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE,
+																		   'empty' => 'Type',
+																		   'style' =>'width:77px'));
+							?>
+                        </div>
+                    </div>
+                    <!-- End cell -->
+                    <!-- start cell -->
+                	<div class="row">
+                    	<div class="td2">
+                			<label>Pay Method</label>
+                			 <?php echo $this->Form->input('Provider.payment_method_id',array( 'options'=>$paymentMethods,
+                			 											   'class' =>'input',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE,
+																		   'empty' => 'Method',
+																		   'style' =>'width:73px'));
+							?>
+                        </div>
+                    </div>
+                    <!-- End cell -->
+                    <!-- start cell -->
+                	<div class="row">
+                    	<div class="td2">
+                			<label>Always Pay</label>
+                			 <?php echo $this->Form->checkbox('Provider.always_pay',array( 
+                			 											   'class' =>'input',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE,
+																		   'style' =>'width:73px'));
+							?>
+                        </div>
+                    </div>
+                    <!-- End cell -->
+                    <!-- start cell -->
+                	<div class="row">
+                    	<div class="td2">
+                			<label>Hourly Rate</label>
+                			 <?php echo $this->Form->input('Provider.hourly_pay',array( 
+                			 											   'class' =>'input',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE,
+																		   'style' =>'width:73px'));
+							?>
+                        </div>
+                    </div>
+                    <!-- End cell -->
+                    <!-- start cell -->
+                	<div class="row">
+                    	<div class="td2">
+                			<label>ETO Days</label>
+                			 <?php echo $this->Form->input('Provider.eto_accrued',array( 
+                			 											   'class' =>'input',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE,
+																		   'style' =>'width:73px'));
+							?>
+                        </div>
+                    </div>
+                    <!-- End cell -->
                 </div>
+                <!-- End Row -->
+                <div class="clear" style="height:9px;"></div>
+                <div class="editTable border_bottom">
+                	 <!-- start cell -->
+                	<div class="row">
+                    	<div class="td2">
+                			<label>Cell Phone</label>
+                			 <?php echo $this->Form->input('Provider.cellphone_allowance',array( 
+                			 											   'class' =>'input',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE,
+																		   'style' =>'width:73px'));
+							?>
+                        </div>
+                    </div>
+                    <!-- End cell -->
+                     <!-- start cell -->
+                	<div class="row">
+                    	<div class="td2">
+                			<label>Insurance</label>
+                			 <?php echo $this->Form->input('Provider.insurance_allowance',array( 
+                			 											   'class' =>'input',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE,
+																		   'style' =>'width:73px'));
+							?>
+                        </div>
+                    </div>
+                    <!-- End cell -->
+                     <!-- start cell -->
+                	<div class="row">
+                    	<div class="td2">
+                			<label>Car</label>
+                			 <?php echo $this->Form->input('Provider.car_allowance',array( 
+                			 											   'class' =>'input',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE,
+																		   'style' =>'width:73px'));
+							?>
+                        </div>
+                    </div>
+                    <!-- End cell -->
+                
+                </div>
+                <div class="clear" style="height:9px;"></div>
+                <?php endif; ?>
                 <br/>
                 <!-- start history_box -->
                 <div class="history_box">

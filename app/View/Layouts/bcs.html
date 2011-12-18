@@ -49,10 +49,10 @@
 					if ($this->Security->isLoggedIn()) : ?>
             <ul>
             	<li><a href="/Users/edit"><span><?php echo $this->Html->image('ico_profile.gif', array('alt'=>'Profile')); ?></span>Profile</a></li>
-            	<?php if($this->Security->hasRole('Admin')) : ?>
-                	<li><a href="/Admin/index"><span><?php echo $this->Html->image('ico_Admin.gif', array('alt'=>'Admin')); ?></span>Admin</a></li>
+            	<?php if($this->Security->hasRole('System Management')) : ?>
+                	<li><a href="/Admin/index"><span><?php echo $this->Html->image('ico_admin.gif', array('alt'=>'Admin')); ?></span>Admin</a></li>
                 <?php endif; ?>
-                <li><a href="/Users/Logout"><span><?php echo $this->Html->image('ico_Logout.gif', array('alt'=>'Logout')); ?></span>Logout</a></li>
+                <li><a href="/Users/Logout"><span><?php echo $this->Html->image('ico_logout.gif', array('alt'=>'Logout')); ?></span>Logout</a></li>
             </ul>
             <?php endif; ?>
         </div>

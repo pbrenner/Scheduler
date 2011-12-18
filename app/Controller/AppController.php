@@ -8,7 +8,8 @@ class AppController extends Controller {
 			'Html',
 			'Form',
 			'Session',
-			'Security');
+			'Security',
+			'Time');
 	
 	public $components = array(
 			'Session',
@@ -18,10 +19,8 @@ class AppController extends Controller {
 			)
 	);
 	
-	function beforeFilter() {
-		parent::beforeFilter();
-		$this->Auth->allow('index', 'view');
-	}
+	public $status = array(1=>'Active', 0 => 'Inactive');
+	public $gender = array('M'=> 'Male', 'F' => 'Female');
 }
 	
 ?>

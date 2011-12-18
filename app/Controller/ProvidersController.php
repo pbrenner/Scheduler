@@ -1,7 +1,10 @@
 <?php
 class ProvidersController extends AppController {
 	
-	public $uses = array('Region','Provider','ProviderType');
+	public $uses = array('Region','Provider','ProviderType','ServiceType','PaymentType','PaymentMethod');
+	
+	// Should probably move to bootstrap for sharing.
+	public $payperiodStatus = array('INCOMPLETE' => 'INCOMPLETE', 'PVF CREATED' => 'PVF CREATED', 'FINALIZED' => 'FINALIZED');
 	
 	public function index() {
 		
@@ -28,7 +31,7 @@ class ProvidersController extends AppController {
 		
 		// Facilities list
 		$regions = $this->Region->find('list', array('fields' => array('Region.id', 'Region.name')));
-		$services = array();
+		$services = $this->ServiceType->find('list', array('fields' => array('ServiceType.service_type', 'ServiceType.description')));
 		
 		$this->set(compact('regions','services', 'providers'));
 	}
@@ -52,8 +55,13 @@ class ProvidersController extends AppController {
 		
 	
 		$providerTypes = $this->ProviderType->find('list', array('fields' => array('ProviderType.id', 'ProviderType.name')));
+		$regions = $this->Region->find('list', array('fields' => array('Region.id', 'Region.name')));
+		$paymentTypes = $this->PaymentType->find('list', array('fields' => array('PaymentType.id', 'PaymentType.name')));
+		$paymentMethods = $this->PaymentMethod->find('list', array('fields' => array('PaymentMethod.id', 'PaymentMethod.name')));
+
 		$status = $this->status;
+		$payperiodStatus = $this->payperiodStatus;
 		
-		$this->set(compact('providerTypes','status'));
+		$this->set(compact('providerTypes','status','regions','payperiodStatus','paymentTypes','paymentMethods'));
 	}
 }

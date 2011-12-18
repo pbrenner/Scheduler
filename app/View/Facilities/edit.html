@@ -12,7 +12,7 @@ $().ready(function() {
 	<?php echo $this->Form->create('Facility', array('name'=>'facilityEdit'));?>
 		<!-- start detail_box -->
 		<div class="detail_box">
-		<?php echo $this->element('titleBar', array('returnLink' => '/Facilities/Index', 'title'=>'Facility Details')); ?>
+		<?php echo $this->element('titleBar', array('returnLink' => '/Facilities/Index', 'title'=>'Facility Details', 'save'=>TRUE)); ?>
             <!-- start info -->
             <div class="info">
         	<div>
@@ -47,18 +47,34 @@ $().ready(function() {
                     <!-- end cell -->
                     <!-- start cell -->
                 	<div class="row">
-                    	<div class="td5">
-                			<label>Contact</label>
-                    		<?php echo $this->Form->input('Facility.contact_name',
-														array('id'    =>'FacilityContactName', 
-                			 								  'class' =>'input',
-                			 								  'div'   => FALSE,
-                			 								  'label' => FALSE,
-															  'style'=>'width: 193px;'));
+						<div class="td4">
+							<label>Region</label>
+							<?php
+								echo $this->Form->input('Facility.region_id', array(
+    													'options' => $regions,
+														'class' =>'selected required',
+														'div' => false,
+														'label' => false,
+   														'empty' => 'Region',
+														'style'=>'width: 153px;'));
 							?>
+                    	</div>
+                   		<!-- end cell -->
+                   	</div>
+                   	<div class="row">
+                    	<div class="td3">
+                			<label>Status</label>
+                			 <?php
+								echo $this->Form->input('Facility.status', array(
+    													'options' => $status,
+														'class' =>'selected required',
+														'div' => false,
+														'label' => false,
+   														'empty' => 'Status',
+														'style'=>'width: 113px;'));
+								?>
                         </div>
                     </div>
-                    <!-- end cell -->
                 </div>
                 <div class="editTable">
                 	<!-- start cell -->
@@ -159,7 +175,7 @@ $().ready(function() {
                     <!-- start cell -->
                 	<div class="row">
                     	<div class="td5">
-                			<label>Contact Email</label>
+                			<label>Email</label>
                 			 <?php echo $this->Form->input('Facility.contact_email',array('id'    =>'FacilityEmail',
                 			 											   'class' =>'input email',
                 			 											   'div'   => FALSE,
@@ -171,9 +187,37 @@ $().ready(function() {
                     <!-- end cell -->
                 </div>
                 <div class="editTable border_bottom">
+					<!-- start cell -->
+                	<div class="row">
+                    	<div class="td5 start">
+                			<label>Psychiatry Lead</label>
+                			 <?php echo $this->Form->input('Facility.pa_lead',array('options' => $providers,
+                			 											   'class' =>'input required',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE,
+																		   'style'=>'width: 193px;'));
+							?>
+                        </div>
+                    </div>
+                    <!-- end cell -->
+                    
+                    <!-- start cell -->
+                	<div class="row">
+                    	<div class="td5">
+                			<label>Psychology Lead</label>
+                			 <?php echo $this->Form->input('Facility.po_lead',array('options' => $providers,
+                			 											   'class' =>'input required',
+                			 											   'div'   => FALSE,
+                			 											   'label' => FALSE,
+																		   'style'=>'width: 193px;'));
+							?>
+                        </div>
+                    </div>
+                    <!-- end cell -->                
+                
                 	<!-- start cell -->
                 	<div class="row">
-                    	<div class="td2 start">
+                    	<div class="td2">
                 			<label>Beds</label>
                 			 <?php echo $this->Form->text('Facility.beds',array('id'=>'FacilityBeds', 
                 			 											   'class' =>'input required',
@@ -184,39 +228,7 @@ $().ready(function() {
                         </div>
                     </div>
                     <!-- end cell -->
-                    <!-- start cell -->
-                	<div class="row">
-                    	<div class="td4 start">
-                			<label>Region</label>
-                			 <?php
-								echo $this->Form->input('Facility.region_id', array(
-    													'options' => $regions,
-														'class' =>'selected required',
-														'div' => false,
-														'label' => false,
-   														'empty' => 'Region',
-														'style'=>'width: 153px;'));
-								?>
-                        </div>
-                    </div>
-                    <!-- end cell -->
                     
-                    <!-- start cell -->
-                	<div class="row">
-                    	<div class="td3">
-                			<label>Status</label>
-                			 <?php
-								echo $this->Form->input('Facility.status', array(
-    													'options' => $status,
-														'class' =>'selected required',
-														'div' => false,
-														'label' => false,
-   														'empty' => 'Status',
-														'style'=>'width: 113px;'));
-								?>
-                        </div>
-                    </div>
-                    <!-- end cell -->
                 </div><br/>
                 <!-- start history_box -->
                 <div class="history_box">
@@ -272,6 +284,7 @@ $().ready(function() {
             <div class="clear"></div>
     	</div>	
     	<!-- end detail_box -->
-	<?php echo $this->Form->hidden('Facility.id'); ?> 
+	<?php echo $this->Form->hidden('Facility.id'); ?>
+	<?php echo $this->Form->hidden('Facility.company_id'); ?> 
     </form>
     <div class="clear"></div>

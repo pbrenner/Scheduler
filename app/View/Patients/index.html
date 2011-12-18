@@ -49,7 +49,14 @@
                     <!-- row3 -->
                     <div class="row1">
                     	<label for="listmenu2">Filter</label>
-                        <select name="filters" id="listmenu2" class="list"><option selected="selected">All Providers</option></select>
+                        <?php
+							echo $this->Form->input('providers', array(
+    							'options' => $providers,
+								'class' => 'list',
+								'div' => false,
+								'label' => false,
+   								'empty' => 'All Providers'));
+						?>
                     </div>
                     <!-- row3 -->
                     <!-- row4 -->
@@ -80,7 +87,7 @@
                     		 <?php $x=0; foreach($patients as $patient) : $x+=1;?>
                     		 	<tr class="tr1">
                     		 		<td class="td1 td5"><?php echo ucwords(strtolower($patient['Patient']['last_name'] . ", " . $patient['Patient']['first_name'])); ?></td>
-                        			<td class="td2 td6"><?php echo $patient['Facility']['abbreviation']; ?></td>
+                        			<td class="td2 td6" title="<?php echo $patient['Facility']['name'];?>"><?php echo $patient['Facility']['abbreviation']; ?></td>
                         			<td class="td2 td7"><?php echo $x; ?></td>
                         			<td class="td3 td8"></td>
                         			<td class="td4 td8">

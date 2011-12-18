@@ -60,35 +60,31 @@
                 <!-- tab left -->
                 <!-- tab right -->
                 <div class="tab_block2_right">
-                	<!-- th1 -->
-                    <div class="th1">	
-                    	<div class="td2" style="width:142px;"><span class="arrow">Name</span></div>
-                        <div class="td2">City</div>
-                        <div class="td3" style="width:30px;">State</div>
-                        <div class="td1" style="width:60px;">Region</div>
-                        <div class="td4" style="width:260px;">Phone</div>
-                    </div>
-                    <!-- th1 -->
-                    <div class="table_box">
-                    <!-- tr1 -->
-                    <?php if (empty($facilities)): ?>
-                    <div class="tr1">	
-                    	<div class="td1" style="width:100%; text-align:center">No Records Found</div>
-                    </div>
-                    <?php endif; ?>
-                    <?php foreach($facilities as $facility) : ?>
-                    <div class="tr1">	
-                    	<div class="td2 td5" style="width:142px;" title="<?php echo $facility['Facility']['name']; ?>"><?php echo ucwords(strtolower(substr($facility['Facility']['name'],0,22))); ?></div>
-                        <div class="td2 td7"><?php echo ucwords(strtolower($facility['Facility']['city'])); ?></div>
-                        <div class="td3 td8" style="width:30px;"><?php echo $facility['Facility']['state']; ?></div>
-                        <div class="td1 td8" style="width:60px;"><?php echo $facility['Region']['name']; ?></div>
-                        <div class="td4 td8" style="width:260px;">
-                         	<?php echo $facility['Facility']['phone']; ?>&nbsp;&nbsp;<a href="/Facilities/Edit/<?php echo $facility['Facility']['id']; ?>">Details</a>&nbsp;&nbsp;<a href="#">Create Log</a>&nbsp;&nbsp;<a href="#">Add Chat</a>
-                        </div>
-                    </div>
-                    <?php endforeach; ?>
-                </div>
-                <!-- end table box -->
+                <!-- th1 -->
+                	<table id="data">
+                		<thead >
+                			<tr class="th1">
+                				<th class="td2" style="width:142px;">Name</th>
+                				<th class="td2">City</th>
+                				<th class="td3" style="width:30px;">State</th>
+                				<th class="td1" style="width:60px;">Region</th>
+                				<th class="td4" style="width:270px;">Phone</th>
+                			</tr>
+                		</thead>
+                   		<tbody>
+                    	<?php foreach($facilities as $facility) : ?>
+                    		<tr class="tr1">	
+                    			<td class="td2 td5" style="width:142px;" title="<?php echo $facility['Facility']['name']; ?>"><?php echo ucwords(strtolower(substr($facility['Facility']['name'],0,22))); ?></td>
+                        		<td class="td2 td7"><?php echo ucwords(strtolower($facility['Facility']['city'])); ?></td>
+                        		<td class="td3 td8" style="width:30px;"><?php echo $facility['Facility']['state']; ?></td>
+                        		<td class="td1 td8" style="width:60px;"><?php echo $facility['Region']['name']; ?></td>
+                        		<td class="td4 td8" style="width:270px;">
+                         			<span><?php echo $facility['Facility']['phone']; ?></span>&nbsp;&nbsp;<span><a class="detail" href="/Facilities/Edit/<?php echo $facility['Facility']['id']; ?>">Details</a></span>&nbsp;&nbsp;<span><a href="#">Create Log</a>&nbsp;&nbsp;<a href="#">Add Chat</span></a>
+                        		</td>
+                    		</tr>
+                    	<?php endforeach; ?>
+						</tbody>
+                	</table>
                 </div>
                 <!-- tab right -->
              </div>
@@ -96,3 +92,16 @@
         <div class="clear"></div>
         </div>
         <!-- end tabblock -->
+        <script type="text/javascript" charset="utf-8">
+			$(document).ready(function() {
+				$('#data').dataTable( {
+					"sScrollY": "450px",
+					"bPaginate": false,
+					"bFilter": false,
+					"bInfo": false,
+					"oLanguage": {
+			            "sZeroRecords": "No records to display"
+			        }
+				} );
+			} );
+		</script>

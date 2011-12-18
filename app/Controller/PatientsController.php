@@ -1,7 +1,7 @@
 <?php
 class PatientsController extends AppController {
 	
-	public $uses = array('Facility', 'Patient','Insurance','Region');
+	public $uses = array('Facility', 'Patient','Insurance','Region','Provider');
 	public $servicesStatus = array('Active'=>'Active', 'D/C'=>'D/C','Deceased' => 'Deceased');
 	public $faceStatus = array('None'=>'None', 'Complete'=>'Complete','Incomplete' => 'Incomplete');
 	
@@ -32,14 +32,21 @@ class PatientsController extends AppController {
 		// Facilities list
 		$facilities = $this->Facility->find('list', array('fields' => array('Facility.id', 'Facility.name'),
         												 'conditions' => array('Facility.status =' => 1),));
+		
+		$providerRS = $this->Provider->find('all', array('fields' => array('Provider.id', 'Provider.first_name','Provider.last_name')));
+		// Reformat the providers
+		$providers = array(); 
+		foreach ($providerRS as $key => $value) {
+			$providers[$key] = $value['Provider']['first_name'] . ' ' . $value['Provider']['last_name'];
+		}
 	
 		$regions = $this->Region->find('list', array('fields' => array('Region.id', 'Region.name')));
-		$this->set(compact('facilities','patients','regions'));
+		$this->set(compact('facilities','patients','regions','providers'));
 	}
 	
 	public function edit($id=0) {
 		if ($this->request->is('post') || $this->request->is('put')) {
-			$this->request->data['Patient']['company_id'] = 2;
+			$this->request->data['Patient']['company_id'] = 1;
 			if ($this->Patient->save($this->request->data)) {
 				$this->Session->setFlash("<span>Patient Information has been saved.</span>", 'default', array('class' => 'flash_success'));
 				$this->redirect(array('action' => 'index'));

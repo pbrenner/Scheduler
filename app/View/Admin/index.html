@@ -1,82 +1,39 @@
 <!-- start tabblock -->
-	<div class="tab_block2">
-		<!-- tab content -->
-		<div class="tab_block2_content">
-			<!-- tab left -->
-			<div class="tab_block2_left">
-				<div class="orange panel">
-				
-				</div>
-			
-			</div>
-			<!-- tab left -->
-			<!-- tab right -->
-			<div class="tab_block2_right">
-				<!-- th1 -->
-				<div class="th1">	
-					<div class="td1"><span class="arrow">Name</span></div>
-					<div class="td2">Facility</div>
-					<div class="td2">Last Provider</div>
-					<div class="td3">F/U Date</div>
-					<div class="td4">Status</div>
-				</div>
-				<!-- th1 -->
-				<div class="table_box">
-					<!-- tr1 -->
-                    <?php if (empty($patients)): ?>
-                    <div class="tr1">	
-                    	<div class="td1" style="width:100%; text-align:center">No Records Found</div>
-                    </div>
-                    <?php endif; ?>
-                    <?php foreach($patients as $patient) : ?>
-                    <div class="tr1">	
-                    	<div class="td1 td5"><?php echo ucwords(strtolower($patient['Patient']['last_name'] . ", " . $patient['Patient']['first_name'])); ?></div>
-                        <div class="td2 td6"><?php echo $patient['Facility']['abbreviation']; ?></div>
-                        <div class="td2 td7"></div>
-                        <div class="td3 td8"></div>
-                        <div class="td4 td8">
-                        	<span class="status">
-                        		<?php if ($patient['Patient']['pa_status'] == 'Active'): ?>
-                        			<?php echo $this->Html->image('img_pic1.gif', array('alt' => 'PA Active', 'title'=>'Psychiatry'));?>
-                        		<?php else:?>
-                        			<?php echo $this->Html->image('img_pic2.gif', array('alt' => 'PA Inactive', 'title'=>'Psychiatry'));?>
-                        		<?php endif;?>
-                        	</span>
-                        	
-                        	<span class="status">
-                        		<?php if ($patient['Patient']['po_status'] == 'Active'): ?>
-                        			<?php echo $this->Html->image('img_pic3.gif', array('alt' => 'NPA Active', 'title'=>'NP/PA Psychiatry'));?>
-                        		<?php else:?>
-                        			<?php echo $this->Html->image('img_pic4.gif', array('alt' => 'NPA Inactive', 'title'=>'NP/PA Psychiatry'));?>
-                        		<?php endif;?>
-                        	</span>
-                        	
-                        	<span class="status">
-                        		<?php if ($patient['Patient']['sw_status'] == 'Active'): ?>
-                        			<?php echo $this->Html->image('img_pic5.gif', array('alt' => 'PO Active', 'title'=>'Psychology'));?>
-                        		<?php else:?>
-                        			<?php echo $this->Html->image('img_pic6.gif', array('alt' => 'PO Inactive', 'title'=>'Psychology'));?>
-                        		<?php endif;?>
-                        	</span>
-                        	
-                        	<span class="status">
-                        		<?php if ($patient['Patient']['npa_status'] == 'Active'): ?>
-                        			<?php echo $this->Html->image('img_pic7.gif', array('alt' => 'SW Active', 'title'=>'Social Work'));?>
-                        		<?php else:?>
-                        			<?php echo $this->Html->image('img_pic8.gif', array('alt' => 'SW Inactive', 'title'=>'Social Work'));?>
-                        		<?php endif;?>
-                        	</span>
-
-                            <a href="/Patients/Edit/<?php echo $patient['Patient']['id']; ?>" class="detail">Details</a>
-                        </div>
-                    </div>
-                    <?php endforeach; ?>
-                </div>
-                <!-- end table box -->
-			</div>
-			<!-- tab right -->
+<div class="tab_block2">
+	<!-- start tab_nav -->
+	 <?php echo $this->element('titleBar', array('returnLink' => '/Patients/Index', 'title'=>'System Maintenance', 'save'=>FALSE)); ?>	
+	<!-- end tab_nav -->
+             
+	<!-- tab content -->
+	<div class="tab_block2_content">
+		<!-- tab left -->
+		<div class="tab_block2_left">
+			<?php echo $this->element('system_maintenance'); ?>
 		</div>
-		<!-- tab content -->
-		<div class="clear"></div>
+		<!-- tab left -->
+		
+		<!-- tab right -->
+		<div class="tab_block2_right table_box">
+                	
+		</div>
+		<!-- tab right -->
+		
 	</div>
-	<!-- end tabblock -->
+	<!-- tab content -->
+	<div class="clear"></div>
+</div>
+
+<!-- end tabblock -->
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+		$('#data').dataTable( {
+			"sScrollY": "450px",
+			"bPaginate": false,
+			"bFilter": false,
+			"bInfo": false,
+			"oLanguage": {
+				"sZeroRecords": "No records to display"
+			}
+		});
+	});
+</script>

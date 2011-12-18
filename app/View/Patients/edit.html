@@ -19,7 +19,7 @@ $().ready(function() {
 
 		<!-- start detail_box -->
 		<div class="detail_box">
-        	<?php echo $this->element('titleBar', array('returnLink' => '/Patients/Index', 'title'=>'Patient Details')); ?>
+        	<?php echo $this->element('titleBar', array('returnLink' => '/Patients/Index', 'title'=>'Patient Details', 'save'=>TRUE)); ?>
             <!-- start info -->
             <div class="info">
             <form action="">
@@ -309,5 +309,6 @@ $().ready(function() {
             <div class="clear"></div>
     	</div>	
     	<!-- end detail_box -->
-   	 <?php echo $this->Form->hidden('Patient.id'); ?> 
+   	 <?php echo $this->Form->hidden('Patient.id'); ?>
+   	 <?php echo $this->Form->hidden('Patient.company_id'); ?> 
     </form>
