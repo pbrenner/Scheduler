@@ -1,0 +1,23 @@
+<div class="panel_left orange">
+	<ul>
+		<li><a href="/admin/PaymentMethods/view">Payment Methods</a></li>
+		<li><a href="/admin/PaymentTypes/view">Payment Types</a></li>
+		<li><a href="/admin/ProviderTypes/view">Provider Types</a></li>
+		<li><a href="/admin/VisitStatus/view">Visit Status</a></li>
+		<li><a href="#">Pay Periods</a></li>
+		<li><a href="/admin/ServiceTypes/view">Service Types</a></li>
+		<li><a href="/admin/Departments/view">Departments</a></li>
+		<li><a href="/admin/PayrollFrequencies/view">Payroll Frequencies</a></li>
+		<li><a href="/admin/DxCodeClassifications/view">DX Code Classifications</a></li>
+		<li><a href="/admin/DxCodeGroups/view">DX Code Groups</a></li>
+		<!-- 
+		<li><a href="/admin/DxCodes/view">DX Codes</a></li>
+		 -->
+	</ul>
+</div>
+<?php if (isset($addLink) && !empty($addLink)): ?>
+<div class="clear" style="height:13px;"></div>
+<div class="admin">
+	<input type="button" name="add" value="" class="search button2" onClick="document.location.href='<?php echo $addLink; ?>';"/>
+</div>
+<?php endif; ?>

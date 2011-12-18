@@ -1,0 +1,67 @@
+<!-- start tabblock -->
+<div class="tab_block2">
+	<!-- start tab_nav -->
+	 <?php echo $this->element('titleBar', array('returnLink' => '/Admin/Index', 'title'=>'System Maintenance: Service Types List', 'save'=>FALSE)); ?>	
+	<!-- end tab_nav -->
+             
+	<!-- tab content -->
+	<div class="tab_block2_content">
+		<!-- tab left -->
+		<div class="tab_block2_left">
+			<?php echo $this->element('system_maintenance', array('addLink' => '/admin/ServiceTypes/edit/0')); ?>
+		</div>
+		<!-- tab left -->
+		
+		<!-- tab right -->
+		
+		<!-- table box -->
+		<div class="tab_block2_right table_box">
+                	
+			<table id="data">
+				<!-- th1 -->
+				<thead>
+					<tr class="th1">
+						<th class="td2" style="width:140px;">Service Type</th>
+						<th class="td2" style="width:140px;">Date Created</th>
+						<th class="td1" style="width:140px;"">Created By</th>
+						<th class="td2" style="width:210px;">Status</th>
+					</tr>
+				</thead>
+				<!--  End th1 -->
+				
+				<!--  table body -->
+				<tbody>
+					<?php foreach($serviceTypes as $serviceType) : ?>
+					<tr class="tr1">	
+						<td class="td2 td5" style="width:140px;"><?php echo $serviceType['ServiceType']['service_type']; ?></td>
+						<td class="td2 td7" style="width:140px;"><?php echo $this->Time->format('m/d/Y h:i:s a', $serviceType['ServiceType']['created']); ?></td>
+						<td class="td1 td8" style="width:140px;"><?php echo $serviceType['Created']['username']; ?></td>
+						<td class="td4 td8" style="width:210px;">
+							<?php echo ($serviceType['ServiceType']['status'] == 1 ? 'Active' : 'Inactive'); ?>&nbsp;&nbsp;<a class="detail" href="/admin/ServiceTypes/edit/<?php echo $serviceType['ServiceType']['id']; ?>">Details</a></span>
+						</td>
+					</tr>
+					<?php endforeach; ?>
+				</tbody>
+				<!--  End table body -->
+			</table>
+		</div>
+		<!-- end tab right -->
+		
+	</div>
+	<!-- tab content -->
+	<div class="clear"></div>
+</div>
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+		$('#data').dataTable( {
+			"sScrollY": "450px",
+			"bPaginate": false,
+			"bFilter": false,
+			"bInfo": false,
+			"oLanguage": {
+				"sZeroRecords": "No records to display"
+			},
+			"aoColumns"   : [null, null, null, { "bSortable": false }],
+		});
+	});
+</script>

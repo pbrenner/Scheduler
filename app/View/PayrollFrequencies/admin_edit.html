@@ -1,0 +1,122 @@
+<style type="text/css">
+#editform .errormsg {
+	padding: 10px 10px 0 10px;
+	width: auto;
+	float: none;
+}
+
+</style>
+<?php echo $this->Form->create('PayrollFrequency', array('id'=>'editform'));?>
+<!-- start tabblock -->
+<div class="tab_block2">
+	<!-- start tab_nav -->
+	 <?php 
+		if ($this->data['PayrollFrequency']['id'] == 0) :
+			echo $this->element('titleBar', array('returnLink' => '/admin/PayrollFrequencies/view', 'title'=>'System Maintenance: Payroll Frequency Add', 'save'=>TRUE)); 
+		else :	
+			echo $this->element('titleBar', array('returnLink' => '/admin/PayrollFrequencies/view', 'title'=>'System Maintenance: Payroll Frequency Edit', 'save'=>TRUE));
+		endif;
+	?>	
+	<!-- end tab_nav -->
+             
+	<!-- tab content -->
+	<div class="tab_block2_content">
+		<!-- tab left -->
+		<div class="tab_block2_left">
+			<?php echo $this->element('system_maintenance'); ?>
+		</div>
+		<!-- tab left -->
+		
+		<!-- tab right -->
+		<!-- table box -->
+		<div class="tab_block2_right">
+				<div class="errormsg" style="display:none;color: red;height:30px;font-weight:bold;font-size:14px;">
+      				<img src="/img/warning.gif" alt="Warning!" width="24" height="24" style="float:left; margin: -5px 10px 0px 0px; ">
+      				<span></span><br clear="all">
+    			</div>
+				<div class="admin form">
+					<fieldset>
+						<div class="input text required">
+							<label for="PayrollFrequencyName">PayrollFrequency:</label>
+							<?php echo $this->Form->input('PayrollFrequency.name', array('label'=>false,'div'=>false,'size'=>30,'id'=>'name','name'=>'name')); ?>
+						</div>
+						<div class="input text required">
+							<label for="PayrollFrequencyStatus">Status:</label>
+							<?php echo $this->Form->input('PayrollFrequency.status', array('label'=>false,'div'=>false,'id'=>'status','class'=>'select required','name'=>'status','options'=>$status)); ?>
+						</div>
+						<div class="input text required">
+							<label for="PayrollFrequencyCreatedBy">Created By:</label>
+							<?php 
+								if (isset($this->data['Created']['username']) && !empty($this->data['Created']['username'])) :
+									echo $this->data['Created']['username'] . " (" . $this->data['Created']['first_name'] . " " .  $this->data['Created']['last_name'] . ")";
+								else:
+									echo 'N/A';
+								endif;
+							?>
+						</div>
+						<div class="input text required">
+							<label for="PayrollFrequencyCreated" >Created On:</label>
+							<?php 
+								if (isset($this->data['PayrollFrequency']['created']) && !empty($this->data['PayrollFrequency']['created'])) :
+									echo $this->Time->format('m/d/Y h:i:s a', $this->data['PayrollFrequency']['created']);
+								else:
+									echo '&nbsp';
+								endif;
+							?>
+						</div>
+						<div class="input text required">
+							<label for="PayrollFrequencyModifedBy" >Modified By:</label>
+							<?php 
+								if (isset($this->data['Modified']['username']) && !empty($this->data['Modified']['username'])) :
+									echo $this->data['Modified']['username'] . " (" . $this->data['Modified']['first_name'] . " " .  $this->data['Modified']['last_name'] . ")";
+								else:
+									echo 'N/A';
+								endif;
+							?>
+						</div>
+						<div class="input text required">
+							<label for="PayrollFrequencyModified">Modified On:</label>
+							<?php 
+								if (isset($this->data['Modified']['username']) && !empty($this->data['Modified']['username'])) :
+									echo $this->Time->format('m/d/Y h:i:s a', $this->data['PayrollFrequency']['modified']); 
+								else:
+									echo '&nbsp';
+								endif;
+							?>
+						</div>
+						<?php echo $this->Form->hidden('PayrollFrequency.id'); ?>
+    				</fieldset>
+				</div>
+				<div class="clear"></div>
+		</div>
+		<!-- end tab right -->
+	</div>
+	<!-- tab content -->
+	<div class="clear"></div>
+</div>
+</form>
+<script type="text/javascript">
+	
+	jQuery.validator.messages.required = "";
+	$(document).ready(function(){
+		$("#editform").validate({
+			invalidHandler: function(e, validator) {
+				var errors = validator.numberOfInvalids();
+				if (errors) {
+					var message = errors == 1
+						? 'You missed 1 field. It has been highlighted below'
+						: 'You missed ' + errors + ' fields.  They have been highlighted below';
+					$("div.errormsg span").html(message);
+					$("div.errormsg").show();
+				} else {
+					$("div.errormsg").hide();
+				}
+			},
+  			rules: {
+  				name: "required",
+  				status: "required"
+  			}
+		});
+  	});
+	
+</script>

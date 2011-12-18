@@ -1,0 +1,68 @@
+<!-- start tabblock -->
+<div class="tab_block2">
+	<!-- start tab_nav -->
+	 <?php echo $this->element('titleBar', array('returnLink' => '/Patients/Index', 'title'=>'System Maintenance', 'save'=>FALSE)); ?>	
+	<!-- end tab_nav -->
+             
+	<!-- tab content -->
+	<div class="tab_block2_content">
+		<!-- tab left -->
+		<div class="tab_block2_left">
+			<div class="panel_left orange">
+				<B>HERE</B>
+			</div>
+		</div>
+		<!-- tab left -->
+		
+		<!-- tab right -->
+		<div class="tab_block2_right table_box">
+                	
+			<!-- th1 -->
+			<table id="data">
+				<thead>
+					<tr class="th1">
+						<th class="td2" style="width:122px;">Name</th>
+						<th class="td2" style="width:30px;">Title</th>
+						<th class="td1" style="width:107px;"">Phone</th>
+						<th class="td2" style="width:133px;">Email</th>
+						<th class="td4" style="width:235px;">Last Payroll</th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php foreach($providers as $provider) : ?>
+					<tr class="tr1">	
+						<td class="td2 td5" style="width:122px;"><?php echo $provider['Provider']['last_name'] . ", " . $provider['Provider']['first_name']; ?></td>
+						<td class="td2 td7" style="width:30px;"><?php echo $provider['Provider']['title']; ?></td>
+						<td class="td1 td8" style="width:107px;"><?php echo $provider['Provider']['phone']; ?></td>
+						<td class="td2 td8" style="width:133px;"><?php echo $provider['Provider']['email']; ?></td>
+						<td class="td4 td8" style="width:235px;">
+							<?php echo $provider['Provider']['payperiod_status']; ?>&nbsp;&nbsp;<a class="detail" href="/Providers/Edit/<?php echo $provider['Provider']['id']; ?>">Details</a>&nbsp;&nbsp;<a href="#">PVF</a>&nbsp;&nbsp;<a href="#">Payroll</a></span>
+						</td>
+					</tr>
+					<?php endforeach; ?>
+				</tbody>
+			</table>
+		</div>
+		<!-- end table box -->
+		
+	</div>
+	<!-- tab right -->
+	
+	<!-- tab content -->
+	<div class="clear"></div>
+</div>
+
+<!-- end tabblock -->
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function() {
+		$('#data').dataTable( {
+			"sScrollY": "450px",
+			"bPaginate": false,
+			"bFilter": false,
+			"bInfo": false,
+			"oLanguage": {
+				"sZeroRecords": "No records to display"
+			}
+		});
+	});
+</script>

@@ -1,0 +1,122 @@
+<style type="text/css">
+#editform .errormsg {
+	padding: 10px 10px 0 10px;
+	width: auto;
+	float: none;
+}
+
+</style>
+<?php echo $this->Form->create('DxCodeGroup', array('id'=>'editform'));?>
+<!-- start tabblock -->
+<div class="tab_block2">
+	<!-- start tab_nav -->
+	 <?php 
+		if ($this->data['DxCodeGroup']['id'] == 0) :
+			echo $this->element('titleBar', array('returnLink' => '/admin/DxCodeGroups/view', 'title'=>'System Maintenance: Dx Code Group Add', 'save'=>TRUE)); 
+		else :	
+			echo $this->element('titleBar', array('returnLink' => '/admin/DxCodeGroups/view', 'title'=>'System Maintenance: Dx Code Group Edit', 'save'=>TRUE));
+		endif;
+	?>	
+	<!-- end tab_nav -->
+             
+	<!-- tab content -->
+	<div class="tab_block2_content">
+		<!-- tab left -->
+		<div class="tab_block2_left">
+			<?php echo $this->element('system_maintenance'); ?>
+		</div>
+		<!-- tab left -->
+		
+		<!-- tab right -->
+		<!-- table box -->
+		<div class="tab_block2_right">
+				<div class="errormsg" style="display:none;color: red;height:30px;font-weight:bold;font-size:14px;">
+      				<img src="/img/warning.gif" alt="Warning!" width="24" height="24" style="float:left; margin: -5px 10px 0px 0px; ">
+      				<span></span><br clear="all">
+    			</div>
+				<div class="admin form">
+					<fieldset>
+						<div class="input text required">
+							<label for="DxCodeGroupName">Group:</label>
+							<?php echo $this->Form->input('DxCodeGroup.name', array('label'=>false,'div'=>false,'size'=>30,'id'=>'name','name'=>'name')); ?>
+						</div>
+						<div class="input text required">
+							<label for="DxCodeGroupStatus">Status:</label>
+							<?php echo $this->Form->input('DxCodeGroup.status', array('label'=>false,'div'=>false,'class'=>'select required','name'=>'status','options'=>$status)); ?>
+						</div>
+						<div class="input text required">
+							<label for="DxCodeGroupCreatedBy">Created By:</label>
+							<?php 
+								if (isset($this->data['Created']['username']) && !empty($this->data['Created']['username'])) :
+									echo $this->data['Created']['username'] . " (" . $this->data['Created']['first_name'] . " " .  $this->data['Created']['last_name'] . ")";
+								else:
+									echo 'N/A';
+								endif;
+							?>
+						</div>
+						<div class="input text required">
+							<label for="DxCodeGroupCreated" >Created On:</label>
+							<?php 
+								if (isset($this->data['DxCodeGroup']['created']) && !empty($this->data['DxCodeGroup']['created'])) :
+									echo $this->Time->format('m/d/Y h:i:s a', $this->data['DxCodeGroup']['created']);
+								else:
+									echo '&nbsp';
+								endif;
+							?>
+						</div>
+						<div class="input text required">
+							<label for="DxCodeGroupModifedBy" >Modified By:</label>
+							<?php 
+								if (isset($this->data['Modified']['username']) && !empty($this->data['Modified']['username'])) :
+									echo $this->data['Modified']['username'] . " (" . $this->data['Modified']['first_name'] . " " .  $this->data['Modified']['last_name'] . ")";
+								else:
+									echo 'N/A';
+								endif;
+							?>
+						</div>
+						<div class="input text required">
+							<label for="DxCodeGroupModified">Modified On:</label>
+							<?php 
+								if (isset($this->data['Modified']['username']) && !empty($this->data['Modified']['username'])) :
+									echo $this->Time->format('m/d/Y h:i:s a', $this->data['DxCodeGroup']['modified']); 
+								else:
+									echo '&nbsp';
+								endif;
+							?>
+						</div>
+						<?php echo $this->Form->hidden('DxCodeGroup.id'); ?>
+    				</fieldset>
+				</div>
+				<div class="clear"></div>
+		</div>
+		<!-- end tab right -->
+	</div>
+	<!-- tab content -->
+	<div class="clear"></div>
+</div>
+</form>
+<script type="text/javascript">
+	
+	jQuery.validator.messages.required = "";
+	$(document).ready(function(){
+		$("#editform").validate({
+			invalidHandler: function(e, validator) {
+				var errors = validator.numberOfInvalids();
+				if (errors) {
+					var message = errors == 1
+						? 'You missed 1 field. It has been highlighted below'
+						: 'You missed ' + errors + ' fields.  They have been highlighted below';
+					$("div.errormsg span").html(message);
+					$("div.errormsg").show();
+				} else {
+					$("div.errormsg").hide();
+				}
+			},
+  			rules: {
+  				name: "required",
+  				status: "required"
+  			}
+		});
+  	});
+	
+</script>
