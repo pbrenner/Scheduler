@@ -97,12 +97,18 @@ $().ready(function() {
                 	<div class="row">
                     	<div class="td3">
                 			<label>Regions</label>
-                    		<?php echo $this->Form->input('Provider.status',array('options' => $regions, 
-                			 											   			 'class' =>'selected',
-                			 											   			 'div'   => FALSE,
-                			 											   			 'label' => FALSE,
-                			 											   			 'empty' => 'Region',
-																					 'style' =>'width:113px'));
+                    		<?php //echo $this->Form->input('Provider.status',array('options' => $regions, 
+                			 	//										   			 'class' =>'selected',
+                			 	//										   			 'div'   => FALSE,
+                			 	//										   			 'label' => FALSE,
+                			 	//										   			 'empty' => 'Region',
+								//													 'style' =>'width:113px'));
+								echo $this->Form->input('Region', array('options' => $regions,
+																		'div'   => FALSE,
+																		'label' => FALSE,
+																		'empty' => 'Region',
+																		'style' =>'width:113px',
+																		'size'  => '3'));
 							?>
                         </div>
                     </div>
@@ -163,7 +169,7 @@ $().ready(function() {
                     	<div class="td4 start">
                 			<label>Current Pay Period Status</label>
                 			 <?php echo $this->Form->input('Provider.payperiod_status',array('options' => $payperiodStatus, 
-                			 											   'class' =>'input',
+                			 											   'class' =>'selected',
                 			 											   'div'   => FALSE,
                 			 											   'label' => FALSE));
 							?>
@@ -234,10 +240,10 @@ $().ready(function() {
                     <!-- End cell -->
                     <!-- start cell -->
                 	<div class="row">
-                    	<div class="td2" style="width:84px;">
+                    	<div class="td2" style="width:90px;">
                 			<label>Employee Type</label>
                 			 <?php echo $this->Form->input('Provider.payment_type_id',array('options'=>$paymentTypes,
-                			 											   'class' =>'input',
+                			 											   'class' =>'selected',
                 			 											   'div'   => FALSE,
                 			 											   'label' => FALSE,
 																		   'empty' => 'Type',
@@ -251,7 +257,7 @@ $().ready(function() {
                     	<div class="td2">
                 			<label>Pay Method</label>
                 			 <?php echo $this->Form->input('Provider.payment_method_id',array( 'options'=>$paymentMethods,
-                			 											   'class' =>'input',
+                			 											   'class' =>'selected',
                 			 											   'div'   => FALSE,
                 			 											   'label' => FALSE,
 																		   'empty' => 'Method',
@@ -277,7 +283,7 @@ $().ready(function() {
                 	<div class="row">
                     	<div class="td2">
                 			<label>Hourly Rate</label>
-                			 <?php echo $this->Form->input('Provider.hourly_pay',array( 
+                			 <?php echo $this->Form->text('Provider.hourly_pay',array( 
                 			 											   'class' =>'input',
                 			 											   'div'   => FALSE,
                 			 											   'label' => FALSE,
@@ -290,7 +296,7 @@ $().ready(function() {
                 	<div class="row">
                     	<div class="td2">
                 			<label>ETO Days</label>
-                			 <?php echo $this->Form->input('Provider.eto_accrued',array( 
+                			 <?php echo $this->Form->text('Provider.eto_accrued',array( 
                 			 											   'class' =>'input',
                 			 											   'div'   => FALSE,
                 			 											   'label' => FALSE,
@@ -307,7 +313,7 @@ $().ready(function() {
                 	<div class="row">
                     	<div class="td2">
                 			<label>Cell Phone</label>
-                			 <?php echo $this->Form->input('Provider.cellphone_allowance',array( 
+                			 <?php echo $this->Form->text('Provider.cellphone_allowance',array( 
                 			 											   'class' =>'input',
                 			 											   'div'   => FALSE,
                 			 											   'label' => FALSE,
@@ -320,7 +326,7 @@ $().ready(function() {
                 	<div class="row">
                     	<div class="td2">
                 			<label>Insurance</label>
-                			 <?php echo $this->Form->input('Provider.insurance_allowance',array( 
+                			 <?php echo $this->Form->text('Provider.insurance_allowance',array( 
                 			 											   'class' =>'input',
                 			 											   'div'   => FALSE,
                 			 											   'label' => FALSE,
@@ -333,7 +339,7 @@ $().ready(function() {
                 	<div class="row">
                     	<div class="td2">
                 			<label>Car</label>
-                			 <?php echo $this->Form->input('Provider.car_allowance',array( 
+                			 <?php echo $this->Form->text('Provider.car_allowance',array( 
                 			 											   'class' =>'input',
                 			 											   'div'   => FALSE,
                 			 											   'label' => FALSE,

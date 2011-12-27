@@ -68,7 +68,7 @@
                 				<th class="td2">City</th>
                 				<th class="td3" style="width:30px;">State</th>
                 				<th class="td1" style="width:60px;">Region</th>
-                				<th class="td4" style="width:270px;">Phone</th>
+                				<th class="td4" style="width:280px;">Phone</th>
                 			</tr>
                 		</thead>
                    		<tbody>
@@ -78,7 +78,7 @@
                         		<td class="td2 td7"><?php echo ucwords(strtolower($facility['Facility']['city'])); ?></td>
                         		<td class="td3 td8" style="width:30px;"><?php echo $facility['Facility']['state']; ?></td>
                         		<td class="td1 td8" style="width:60px;"><?php echo $facility['Region']['name']; ?></td>
-                        		<td class="td4 td8" style="width:270px;">
+                        		<td class="td4 td8" style="width:280px;">
                          			<span><?php echo $facility['Facility']['phone']; ?></span>&nbsp;&nbsp;<span><a class="detail" href="/Facilities/Edit/<?php echo $facility['Facility']['id']; ?>">Details</a></span>&nbsp;&nbsp;<span><a href="#">Create Log</a>&nbsp;&nbsp;<a href="#">Add Chat</span></a>
                         		</td>
                     		</tr>
@@ -94,14 +94,25 @@
         <!-- end tabblock -->
         <script type="text/javascript" charset="utf-8">
 			$(document).ready(function() {
-				$('#data').dataTable( {
+				
+				var oTable = $('#data').dataTable( {
 					"sScrollY": "450px",
 					"bPaginate": false,
-					"bFilter": false,
+					"bFilter": true,
 					"bInfo": false,
 					"oLanguage": {
 			            "sZeroRecords": "No records to display"
 			        }
 				} );
+				
+				$("#data_filter").hide();
+				
+				 $("#states", this).change( function () {
+			            oTable.fnFilter($(this).val(), 2, false, false);
+			        } );
+				 
+				 $("#regions", this).change( function () {
+			            oTable.fnFilter($(this).val(), 3, false, false);
+			        } );
 			} );
 		</script>

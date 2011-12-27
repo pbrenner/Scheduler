@@ -272,7 +272,7 @@ body{
 .insurance .selected, .editTable .selected, .consent .selected, .id .selected, .type .selected, .service .td2 .selected, .service .td4 .input, .service .td5 .input{
 	background:#fff;
 	width:138px;
-	height:20px;
+	height:23px;
 	margin:0 0 5px 8px;
 	border:1px solid #acacac;
 	float:right;

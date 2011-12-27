@@ -28,7 +28,7 @@ class FacilitiesController extends AppController {
 		
 		// Facilities list
 		$states = $this->State->find('list', array('fields' => array('State.state_code', 'State.state_name')));
-		$regions = $this->Region->find('list', array('fields' => array('Region.id', 'Region.name')));
+		$regions = $this->Region->find('list', array('fields' => array('Region.name', 'Region.name')));
 		
 		$this->set(compact('states','regions','facilities'));
 	}
@@ -44,7 +44,7 @@ class FacilitiesController extends AppController {
 			$this->request->data = $this->Facility->read(null, $id);
 		}
 		$states = $this->State->find('list', array('fields' => array('State.state_code', 'State.state_name')));
-		$regions = $this->Region->find('list', array('fields' => array('Region.id', 'Region.name')));
+		//$regions = $this->Region->find('list', array('fields' => array('Region.id', 'Region.name')));
 		$providerRS = $this->Provider->find('all', array('fields' => array('Provider.id', 'Provider.first_name','Provider.last_name')));
 		// Reformat the providers
 		$providers = array(); 
@@ -53,6 +53,8 @@ class FacilitiesController extends AppController {
 		}
 		$facilityTypes = array();
 		$status = $this->status;
+		$this->set('regions', $this->Provider->Region->find('list'));
+		
 		$this->set(compact('states','regions','facilityTypes','status', 'providers'));
 	}
 }

@@ -25,7 +25,7 @@ class ProvidersController extends AppController {
 		
 			$providers = $this->Provider->find('all', array('conditions' => $conditions,'order'=> array('Provider.first_name ASC','Provider.last_name ASC')));
 		} else {
-			$providers = $this->Provider->find('all',array('conditions' => array('status' => 1),'order'=>array('Provider.first_name ASC','Provider.last_name ASC')));
+			$providers = $this->Provider->find('all',array('conditions' => array('Provider.status' => 1),'order'=>array('Provider.first_name ASC','Provider.last_name ASC')));
 		}
 		
 		
