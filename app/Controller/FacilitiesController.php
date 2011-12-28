@@ -27,7 +27,28 @@ class FacilitiesController extends AppController {
 		}
 		
 		// Facilities list
-		$states = $this->State->find('list', array('fields' => array('State.state_code', 'State.state_name')));
+		
+		$db = $this->Facility->getDataSource();
+		$subQuery = $db->buildStatement(
+    		array(
+        	'fields'     => array('distinct Facility.state'),
+        	'table'      => $db->fullTableName($this->Facility),
+        	'alias'      => 'Facility',
+        	'limit'      => null,
+        	'offset'     => null,
+        	'joins'      => array(),
+        	'conditions' => null,
+        	'order'      => null,
+        	'group'      => null
+    		),
+    		$this->Facility
+		);
+		$subQuery = 'State.state_code IN (' . $subQuery . ') ';
+		$subQueryExpression = $db->expression($subQuery);
+		
+		$conditions[] = $subQueryExpression;
+		
+		$states = $this->State->find('list', array('fields' => array('State.state_code', 'State.state_name'),'conditions'=>$conditions));
 		$regions = $this->Region->find('list', array('fields' => array('Region.name', 'Region.name')));
 		
 		$this->set(compact('states','regions','facilities'));

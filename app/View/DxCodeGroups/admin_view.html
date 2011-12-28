@@ -21,10 +21,10 @@
 				<!-- th1 -->
 				<thead>
 					<tr class="th1">
-						<th class="td2" style="width:140px;">Group</th>
-						<th class="td2" style="width:140px;">Date Created</th>
-						<th class="td1" style="width:140px;"">Created By</th>
-						<th class="td2" style="width:210px;">Status</th>
+						<th class="td" style="width:140px;"><span class="colHeader">Group</span></th>
+						<th class="td" style="width:140px;"><span class="colHeader">Date Created</span></th>
+						<th class="td" style="width:140px;"><span class="colHeader">Created By</span></th>
+						<th class="td" style="width:210px;"><span class="colHeader">Status</span></th>
 					</tr>
 				</thead>
 				<!--  End th1 -->
@@ -33,11 +33,16 @@
 				<tbody>
 					<?php foreach($dxcodeGroups as $dxcodeGroup) : ?>
 					<tr class="tr1">	
-						<td class="td2 td5" style="width:140px;"><?php echo $dxcodeGroup['DxCodeGroup']['name']; ?></td>
-						<td class="td2 td7" style="width:140px;"><?php echo $this->Time->format('m/d/Y h:i:s a', $dxcodeGroup['DxCodeGroup']['created']); ?></td>
-						<td class="td1 td8" style="width:140px;"><?php echo $dxcodeGroup['Created']['username']; ?></td>
-						<td class="td4 td8" style="width:210px;">
-							<?php echo ($dxcodeGroup['DxCodeGroup']['status'] == 1 ? 'Active' : 'Inactive'); ?>&nbsp;&nbsp;<a class="detail" href="/admin/DxCodeGroups/edit/<?php echo $dxcodeGroup['DxCodeGroup']['id']; ?>">Details</a></span>
+						<td class="td" style="width:140px;"><?php echo $dxcodeGroup['DxCodeGroup']['name']; ?></td>
+						<td class="td" style="width:140px;"><?php echo $this->Time->format('m/d/Y h:i:s a', $dxcodeGroup['DxCodeGroup']['created']); ?></td>
+						<td class="td" style="width:140px;"><?php echo $dxcodeGroup['Created']['username']; ?></td>
+						<td class="td" style="width:210px;">
+							<table border="0" class="actions" width="100%">
+								<tr>
+									<td style="width:86px"><?php echo ($dxcodeGroup['DxCodeGroup']['status'] == 1 ? 'Active' : 'Inactive'); ?></td>
+									<td>&nbsp;<a class="detail" href="/admin/DxCodeGroups/edit/<?php echo $dxcodeGroup['DxCodeGroup']['id']; ?>">Details</a></td>
+								</tr>
+							</table>
 						</td>
 					</tr>
 					<?php endforeach; ?>

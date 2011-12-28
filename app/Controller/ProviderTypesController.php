@@ -25,7 +25,7 @@ class ProviderTypesController extends AppController {
 		}
 		
 		$status = $this->status;
-		$serviceTypes = $this->ServiceType->find('list', array('fields' => array('ServiceType.id', 'ServiceType.service_type'),'conditions' => array('ServiceType.status =' => 1)));
+		$serviceTypes = $this->ServiceType->find('list', array('fields' => array('ServiceType.service_type', 'ServiceType.description'),'conditions' => array('ServiceType.status =' => 1)));
 		$this->set(compact('status','serviceTypes'));
 	}
 }

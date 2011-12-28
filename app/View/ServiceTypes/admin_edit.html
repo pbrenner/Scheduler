@@ -11,7 +11,9 @@
 <div class="tab_block2">
 	<!-- start tab_nav -->
 	 <?php 
-		if ($this->data['ServiceType']['id'] == 0) :
+	 	$addRecord = FALSE;
+		if ($this->data['ServiceType']['service_type'] == "") :
+			$addRecord = TRUE;
 			echo $this->element('titleBar', array('returnLink' => '/admin/ServiceTypes/view', 'title'=>'System Maintenance: Service Types Add', 'save'=>TRUE)); 
 		else :	
 			echo $this->element('titleBar', array('returnLink' => '/admin/ServiceTypes/view', 'title'=>'System Maintenance: Service Types Edit', 'save'=>TRUE));
@@ -38,7 +40,12 @@
 					<fieldset>
 						<div class="input text required">
 							<label for="ServiceTypeName">Service Type:</label>
-							<?php echo $this->Form->input('ServiceType.service_type', array('label'=>false,'div'=>false,'size'=>30,'id'=>'servicetype','name'=>'servicetype')); ?>
+							<?php if (!$addRecord) :
+								      echo $this->Form->text('ServiceType.service_type', array('label'=>false,'div'=>false,'size'=>30,'id'=>'servicetype','name'=>'servicetype', 'readonly' => 'readonly')); 
+								  else :
+								      echo $this->Form->text('ServiceType.service_type', array('label'=>false,'div'=>false,'size'=>30,'id'=>'servicetype','name'=>'servicetype'));
+								  endif;
+							?>
 						</div>
 						<div class="input text required">
 							<label for="ServiceTypeName">Description:</label>
@@ -88,7 +95,6 @@
 								endif;
 							?>
 						</div>
-						<?php echo $this->Form->hidden('ServiceType.id'); ?>
     				</fieldset>
 				</div>
 				<div class="clear"></div>

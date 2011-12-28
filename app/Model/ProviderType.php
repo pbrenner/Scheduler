@@ -14,7 +14,8 @@ class ProviderType extends AppModel {
 					'foreignKey'   => 'modified_by'
 			),
 			'ServiceType' => array(
-					'className'	=>'ServiceType')
+					'className'		=> 'ServiceType',
+					'foreignKey'	=> 'service_type')
 			
 	);
 }
