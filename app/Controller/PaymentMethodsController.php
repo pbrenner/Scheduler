@@ -11,7 +11,7 @@ class PaymentMethodsController extends AppController {
 			
 			// push data to the request object
 			$this->request->data['PaymentMethod']['name'] = $this->request->data['name'];
-			$this->request->data['PaymentMethod']['status'] = $this->request->data['status'];
+			//$this->request->data['PaymentMethod']['status'] = $this->request->data['status'];
 			if ($this->PaymentMethod->save($this->request->data)) {
 				$this->Session->setFlash("<span>Payment Method Information has been saved.</span>", 'default', array('class' => 'flash_success'));
 				$this->redirect(array('action' => 'view'));

@@ -64,22 +64,29 @@
                 	<table id="data">
                 		<thead >
                 			<tr class="th1">
-                				<th class="td2" style="width:142px;">Name</th>
-                				<th class="td2">City</th>
-                				<th class="td3" style="width:30px;">State</th>
-                				<th class="td1" style="width:60px;">Region</th>
-                				<th class="td4" style="width:280px;">Phone</th>
+                				<th class="td" style="width:142px;"><span class="colHeader">Name</span></th>
+                				<th class="td" style="width:112px;"><span class="colHeader">City</span></th>
+                				<th class="td" style="width:60px;"><span class="colHeader">State</span></th>
+                				<th class="td" style="width:60px;"><span class="colHeader">Region</span></th>
+                				<th class="td" style="width:280px;"><span class="colHeader">Phone</span></th>
                 			</tr>
                 		</thead>
                    		<tbody>
                     	<?php foreach($facilities as $facility) : ?>
                     		<tr class="tr1">	
-                    			<td class="td2 td5" style="width:142px;" title="<?php echo $facility['Facility']['name']; ?>"><?php echo ucwords(strtolower(substr($facility['Facility']['name'],0,22))); ?></td>
-                        		<td class="td2 td7"><?php echo ucwords(strtolower($facility['Facility']['city'])); ?></td>
-                        		<td class="td3 td8" style="width:30px;"><?php echo $facility['Facility']['state']; ?></td>
-                        		<td class="td1 td8" style="width:60px;"><?php echo $facility['Region']['name']; ?></td>
-                        		<td class="td4 td8" style="width:280px;">
-                         			<span><?php echo $facility['Facility']['phone']; ?></span>&nbsp;&nbsp;<span><a class="detail" href="/Facilities/Edit/<?php echo $facility['Facility']['id']; ?>">Details</a></span>&nbsp;&nbsp;<span><a href="#">Create Log</a>&nbsp;&nbsp;<a href="#">Add Chat</span></a>
+                    			<td class="td" style="width:142px;" title="<?php echo $facility['Facility']['name']; ?>"><?php echo ucwords(strtolower(substr($facility['Facility']['name'],0,22))); ?></td>
+                        		<td class="td" style="width:112px;"><?php echo ucwords(strtolower($facility['Facility']['city'])); ?></td>
+                        		<td class="td" style="width:60px;"><?php echo $facility['Facility']['state']; ?></td>
+                        		<td class="td" style="width:60px;"><?php echo $facility['Region']['name']; ?></td>
+                        		<td class="td" style="width:280px;">
+                         			<table border="0" class="actions" width="100%">
+										<tr>
+											<td style="width:86px"><?php echo $facility['Facility']['phone']; ?></td>
+											<td>&nbsp;<a class="detail" href="/Facilities/Edit/<?php echo $facility['Facility']['id']; ?>">Details</a></td>
+											<td>&nbsp;<a href="#">Create Log</a></td>
+											<td>&nbsp;<a href="#">Add Chat</a></td>
+										</tr>
+									</table>
                         		</td>
                     		</tr>
                     	<?php endforeach; ?>
@@ -100,6 +107,7 @@
 					"bPaginate": false,
 					"bFilter": true,
 					"bInfo": false,
+					"aoColumns": [null, null,null, null, { "bSortable": false }],
 					"oLanguage": {
 			            "sZeroRecords": "No records to display"
 			        }

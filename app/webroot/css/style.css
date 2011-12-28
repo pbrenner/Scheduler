@@ -478,8 +478,8 @@ form.type .selected{
 	text-align: left;
 }
 
-.tab_block2_right th.sorting_asc, .tab_block2_right th.sorting_desc {
-	padding:6px 0 6px 18px; !important;
+th.sorting_asc span.colHeader, th.sorting_desc span.colHeader {
+	padding-left: 18px;
 }
 
 .tab_block2 {
@@ -564,34 +564,43 @@ form.type .selected{
 .table_box{
 	height:480px;
 	overflow: auto;
-	}
+}
+
+.tab_block2_right .td {
+	height: 15px;
+	float: left;
+	border-left:solid 1px #3f89e0;
+	padding:6px 3px;
+}
+
+
 .tab_block2_right .td1 {
 	width:80px;
 	height:15px;
 	float:left;
 	border-left:solid 1px #3f89e0;
-	padding:6px 9px;
+	padding:6px 3px;
 }
 .tab_block2_right .td2 {
 	width:102px;
 	height:15px;
 	float:left;
 	border-left:solid 1px #3f89e0;
-	padding:6px 9px;
+	padding:6px 4px;
 }
 .tab_block2_right .td3 {
 	width:80px;
 	height:15px;
 	float:left;
 	border-left:solid 1px #3f89e0;
-	padding:6px 9px;
+	padding:6px 4px;
 }
 .tab_block2_right .td4 {
 	width:230px;
 	height:15px;
 	float:left;
 	border-left:solid 1px #3f89e0;
-	padding:6px 9px;
+	padding:6px 4px;
 }
 
 .tab_block2_right .tr1 {
@@ -608,6 +617,7 @@ form.type .selected{
 	margin:-7px 0 0 0;
 }
 .tab_block2_right span.arrow{background:url(../img/bg_arrow.gif) no-repeat right center; padding:0 20px 0 0;}
+
 .tab_block2_right a.detail {
 	background:url(../img/bg_detail.gif) no-repeat;
 	padding:0 0 0 20px;
