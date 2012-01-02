@@ -1442,3 +1442,9 @@
 #9 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(FacilitiesController), Object(CakeRequest), Object(CakeResponse))
 #10 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #11 {main}
+2012-01-02 10:36:41 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-01-02 10:36:51 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

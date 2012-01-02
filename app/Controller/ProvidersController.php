@@ -1,7 +1,7 @@
 <?php
 class ProvidersController extends AppController {
 	
-	public $uses = array('Region','Provider','ProviderType','ServiceType','PaymentType','PaymentMethod');
+	public $uses = array('ProviderRegion','Region','Provider','ProviderType','ServiceType','PaymentType','PaymentMethod');
 	
 	// Should probably move to bootstrap for sharing.
 	public $payperiodStatus = array('INCOMPLETE' => 'INCOMPLETE', 'PVF CREATED' => 'PVF CREATED', 'FINALIZED' => 'FINALIZED');
@@ -28,6 +28,19 @@ class ProvidersController extends AppController {
 			$providers = $this->Provider->find('all', array('conditions' => $conditions,'order'=> array('Provider.first_name ASC','Provider.last_name ASC')));
 		} else {
 			$providers = $this->Provider->find('all',array('conditions' => array('Provider.status' => 1),'order'=>array('Provider.first_name ASC','Provider.last_name ASC')));
+		}
+		
+		foreach($providers as &$provider) {
+			$providerRegions= $this->ProviderRegion->find('all', array('conditions' => array('ProviderRegion.provider_id' => $provider['Provider']['id'])));
+			if ($providerRegions) {
+				$regionsList = array();
+				foreach ($providerRegions as $providerRegion) {
+					$regionsList[] = $providerRegion['ProviderRegion']['region_id'];
+				} 
+				$provider['Provider']['regions'] = implode(",", $regionsList);
+			} else {
+				$provider['Provider']['regions'] = "0";
+			}
 		}
 		
 		

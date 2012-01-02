@@ -79,6 +79,7 @@
 						<th class="td" style="width:90px;""><span class="colHeader">Phone</span></th>
 						<th class="td" style="width:140px;"><span class="colHeader">Email</span></th>
 						<th class="td" style="width:220px;"><span class="colHeader">Last Payroll</span></th>
+						<th class="td" style="width:0px;">Region</th>
 					</tr>
 				</thead>
 				<!--  End th1 -->
@@ -102,7 +103,7 @@
 								</tr>
 							</table>
 						</td>
-						</td
+						<td class="td" style="width:0px;"><?php echo $provider['Provider']['regions']; ?></td>
 					</tr>
 					<?php endforeach; ?>
 				</tbody>
@@ -126,7 +127,7 @@
 			"bPaginate": false,
 			"bFilter": true,
 			"bInfo": false,
-	        "aoColumns": [null, null,null, null, null, { "bSortable": false }],
+	        "aoColumns": [null, null,null, null, null, { "bSortable": false }, { "bSortable": false }],
 	        "oLanguage": {
 	            "sZeroRecords": "No records to display"
 	        }
@@ -135,9 +136,15 @@
 		$("#data_filter").hide();
 		$(".datatable").css('width', '722px');
 		
+		oTable.fnSetColumnVis( 6, false );
+		
 		$("#services", this).change( function () {
             oTable.fnFilter($(this).val(), 2, false, false);
         } );
+		$("#regions", this).change( function () {
+            oTable.fnFilter($(this).val(), 6, false, false);
+        } );
+		
 		
 		$("#searchFld", this).click( function() {
 			 if ($(this).val() != "") {
