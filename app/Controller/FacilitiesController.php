@@ -4,24 +4,17 @@ class FacilitiesController extends AppController {
 	public $uses = array('State','Region','Facility','Provider');
 	
 	public function index() {
+		$searchFld = "";
 		if ($this->request->is('post')) {
 			
+			$searchFld = $this->request->data['searchFld'];
 			// Add search criteria
-			$conditions = array();
-			if (isset($this->request->data['field']) && !empty($this->request->data['field'])) {
-				$conditions['Facility.name LIKE'] =  $this->request->data['field'].'%';
-			}
-			if (isset($this->request->data['states']) && !empty($this->request->data['states'])) {
-				$conditions['Facility.state'] =  $this->request->data['states'];
-			}
-			if (isset($this->request->data['regions']) && !empty($this->request->data['regions'])) {
-				$conditions['Facility.region_id'] =  $this->request->data['regions'];
-			}
-			if (!isset($this->request->data['inactive']) && !empty($this->request->data['inactive'])) {
-				$conditions['Facility.status'] =  1;
+			$filter = array();
+			if (isset($this->request->data['searchFld']) && !empty($this->request->data['searchFld'])) {
+				$filter['Facility.name LIKE'] =  '%'.$this->request->data['searchFld'].'%';
 			}
 			
-			$facilities = $this->Facility->find('all', array('conditions' => $conditions,'order'=> array('Facility.name ASC')));
+			$facilities = $this->Facility->find('all', array('conditions' => $filter,'order'=> array('Facility.name ASC')));
 		} else {
 			$facilities = $this->Facility->find('all',array('conditions' => array('status' => 1),'order'=>array('Facility.name ASC')));
 		}
@@ -51,7 +44,7 @@ class FacilitiesController extends AppController {
 		$states = $this->State->find('list', array('fields' => array('State.state_code', 'State.state_name'),'conditions'=>$conditions));
 		$regions = $this->Region->find('list', array('fields' => array('Region.name', 'Region.name')));
 		
-		$this->set(compact('states','regions','facilities'));
+		$this->set(compact('states','regions','facilities','searchFld'));
 	}
 	
 	public function edit($id=0) {

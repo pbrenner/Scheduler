@@ -7,19 +7,19 @@ class PatientsController extends AppController {
 	
 	public function index() {
 
+		$searchFld = "";
 		if ($this->request->is('post')) {
 		
 			// Add search criteria
 			$conditions = array();
-			if (isset($this->request->data['searchfield']) && !empty($this->request->data['searchfield'])) {
-				$conditions['Patient.last_name LIKE'] =  $this->request->data['searchfield'].'%';
+			$searchFld = $this->request->data['searchFld'];
+			if (isset($this->request->data['searchFld']) && !empty($this->request->data['searchFld'])) {
+				$conditions['OR'] = array(
+						array ("Patient.first_name like " => '%'.$this->request->data['searchFld'].'%'),
+						array ("Patient.last_name like" => '%'.$this->request->data['searchFld'].'%')
+				);
 			}
-			if (isset($this->request->data['regions']) && !empty($this->request->data['regions'])) {
-				$conditions['Facility.region_id'] =  $this->request->data['regions'];
-			}
-			if (isset($this->request->data['facilities']) && !empty($this->request->data['facilities'])) {
-				$conditions['Patient.facility_id'] =  $this->request->data['facilities'];
-			}
+			
 			if (!isset($this->request->data['inactive']) && !empty($this->request->data['inactive'])) {
 				$conditions['Patient.status'] =  1;
 			}
@@ -41,7 +41,7 @@ class PatientsController extends AppController {
 		}
 	
 		$regions = $this->Region->find('list', array('fields' => array('Region.id', 'Region.name')));
-		$this->set(compact('facilities','patients','regions','providers'));
+		$this->set(compact('facilities','patients','regions','providers','searchFld'));
 	}
 	
 	public function edit($id=0) {

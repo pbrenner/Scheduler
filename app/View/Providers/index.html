@@ -19,7 +19,7 @@
 					<!-- row1 -->
                     <div class="row1">
                     	<label for="field1">Search</label>
-                        <input type="text" name="field" id="field1" value="" class="input1" />
+                        <input type="text" name="searchFld" id="searchFld" class="input1" value="<?php echo $searchFld; ?>"/>
                         <input type="button" name="search" value="" class="button1" onClick="document.searchFilter.submit();"/>
                     </div>
                     <!-- row1 -->
@@ -138,6 +138,12 @@
 		$("#services", this).change( function () {
             oTable.fnFilter($(this).val(), 2, false, false);
         } );
+		
+		$("#searchFld", this).click( function() {
+			 if ($(this).val() != "") {
+				$(this).val(""); 
+			 }
+		 });
 	 
 	});
 </script>

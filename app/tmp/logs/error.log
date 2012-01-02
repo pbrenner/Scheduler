@@ -1413,3 +1413,32 @@
 #9 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(FacilitiesController), Object(CakeRequest), Object(CakeResponse))
 #10 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #11 {main}
+2011-12-28 12:18:44 Error: [MissingControllerException] Controller class ImgController could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2011-12-28 12:50:48 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Facility.name' in 'where clause'
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(436): PDOStatement->execute(Array)
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(403): DboSource->_execute('SELECT `State`....', Array)
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(647): DboSource->execute('SELECT `State`....', Array, Array)
+#3 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(1040): DboSource->fetchAll('SELECT `State`....', false)
+#4 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Model.php(2460): DboSource->read(Object(AppModel), Array)
+#5 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/Controller/FacilitiesController.php(42): Model->find('list', Array)
+#6 [internal function]: FacilitiesController->index()
+#7 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Controller/Controller.php(473): ReflectionMethod->invokeArgs(Object(FacilitiesController), Array)
+#8 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#9 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(FacilitiesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2011-12-28 12:52:06 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Facility.name' in 'where clause'
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(436): PDOStatement->execute(Array)
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(403): DboSource->_execute('SELECT `State`....', Array)
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(647): DboSource->execute('SELECT `State`....', Array, Array)
+#3 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Datasource/DboSource.php(1040): DboSource->fetchAll('SELECT `State`....', false)
+#4 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Model/Model.php(2460): DboSource->read(Object(AppModel), Array)
+#5 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/Controller/FacilitiesController.php(42): Model->find('list', Array)
+#6 [internal function]: FacilitiesController->index()
+#7 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Controller/Controller.php(473): ReflectionMethod->invokeArgs(Object(FacilitiesController), Array)
+#8 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#9 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(FacilitiesController), Object(CakeRequest), Object(CakeResponse))
+#10 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
