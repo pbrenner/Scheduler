@@ -14,7 +14,7 @@
 	<div class="tab_block2_content">
 		<!-- tab left -->
 		<div class="tab_block2_left">
-			<form action="/Providers/index" class="search" method="post" name="searchFilter">
+			<form action="/Providers/index" class="search" method="post" name="searchFilter" id="searchFilter">
 				<div>
 					<!-- row1 -->
                     <div class="row1">
@@ -54,7 +54,9 @@
                     
                     <!-- row4 -->
                     <div class="row1">
-                    	<label for="check" class="check"><input type="checkbox" name="check" id="check" class="left" /> Include Inactive</label>
+                    	<label for="check" class="check">
+                    		<input type="checkbox" name="inactiveFlg" id="inactiveFlg" class="left" value="1" <?php echo ($inactiveFlg == "1" ? "checked" : ""); ?>/> Include Inactive</label>
+                    		
                     </div>
                     <!-- row4 -->
                     
@@ -145,12 +147,15 @@
             oTable.fnFilter($(this).val(), 6, false, false);
         } );
 		
-		
 		$("#searchFld", this).click( function() {
 			 if ($(this).val() != "") {
 				$(this).val(""); 
 			 }
 		 });
+		
+		$('#inactiveFlg').click( function() {
+			$('#searchFilter').submit();
+		});
 	 
 	});
 </script>

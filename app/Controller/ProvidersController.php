@@ -9,6 +9,7 @@ class ProvidersController extends AppController {
 	public function index() {
 		
 		$searchFld = "";
+		$inactiveFlg = "";
 		if ($this->request->is('post')) {
 		
 			// Add search criteria
@@ -21,8 +22,10 @@ class ProvidersController extends AppController {
 										);
 			}
 			
-			if (!isset($this->request->data['inactive']) && !empty($this->request->data['inactive'])) {
+			if (!isset($this->request->data['inactiveFlg'])) {
 				$conditions['Provider.status'] =  1;
+			} else {
+				$inactiveFlg = '1';
 			}
 		
 			$providers = $this->Provider->find('all', array('conditions' => $conditions,'order'=> array('Provider.first_name ASC','Provider.last_name ASC')));
@@ -47,8 +50,7 @@ class ProvidersController extends AppController {
 		// Facilities list
 		$regions = $this->Region->find('list', array('fields' => array('Region.id', 'Region.name')));
 		$services = $this->ServiceType->find('list', array('fields' => array('ServiceType.service_type', 'ServiceType.description')));
-		
-		$this->set(compact('regions','services', 'providers','searchFld'));
+		$this->set(compact('regions','services', 'providers','searchFld','inactiveFlg'));
 	}
 	
 	public function edit($id=0) {
