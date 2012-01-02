@@ -5,6 +5,7 @@ class FacilitiesController extends AppController {
 	
 	public function index() {
 		$searchFld = "";
+		$inactiveFlg = "";
 		if ($this->request->is('post')) {
 			
 			$searchFld = $this->request->data['searchFld'];
@@ -12,6 +13,11 @@ class FacilitiesController extends AppController {
 			$filter = array();
 			if (isset($this->request->data['searchFld']) && !empty($this->request->data['searchFld'])) {
 				$filter['Facility.name LIKE'] =  '%'.$this->request->data['searchFld'].'%';
+			}
+			if (!isset($this->request->data['inactiveFlg'])) {
+				$filter['Facility.status'] =  1;
+			} else {
+				$inactiveFlg = '1';
 			}
 			
 			$facilities = $this->Facility->find('all', array('conditions' => $filter,'order'=> array('Facility.name ASC')));
@@ -44,7 +50,7 @@ class FacilitiesController extends AppController {
 		$states = $this->State->find('list', array('fields' => array('State.state_code', 'State.state_name'),'conditions'=>$conditions));
 		$regions = $this->Region->find('list', array('fields' => array('Region.name', 'Region.name')));
 		
-		$this->set(compact('states','regions','facilities','searchFld'));
+		$this->set(compact('states','regions','facilities','searchFld', 'inactiveFlg'));
 	}
 	
 	public function edit($id=0) {

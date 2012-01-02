@@ -13,7 +13,7 @@
              <div class="tab_block2_content">
              	<!-- tab left -->
                 <div class="tab_block2_left">
-                <form action="/Facilities/index" class="search" method="post" name="searchFilter">
+                <form action="/Facilities/index" class="search" method="post" name="searchFilter" id="searchFilter">
                 <div>
                 	<!-- row1 -->
                     <div class="row1">
@@ -50,7 +50,7 @@
                     <!-- row3 -->
                     <!-- row4 -->
                     <div class="row1">
-                    	<label for="check" class="check"><input type="checkbox" name="inactive" id="inactive" class="left" /> Include Inactive</label>
+                    	<input type="checkbox" name="inactiveFlg" id="inactiveFlg" class="left" value="1" <?php echo ($inactiveFlg == "1" ? "checked" : ""); ?>/> Include Inactive</label>
                     </div>
                     <!-- row4 -->
                     <input type="button" name="add" value="" class="button2" onClick="document.location.href='/Facilities/Edit/0';"/>
@@ -128,5 +128,9 @@
 						$(this).val(""); 
 					 }
 				 });
+				 
+				 $('#inactiveFlg').click( function() {
+						$('#searchFilter').submit();
+					});
 			} );
 		</script>
