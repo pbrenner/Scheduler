@@ -1492,3 +1492,8 @@
 2012-01-06 19:21:24 Error: [MissingControllerException] Controller class ImgController could not be found.
 #0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2012-01-23 23:14:30 Error: [MissingActionException] Action PatientsController::view() could not be found.
+#0 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(107): Controller->invokeAction(Object(CakeRequest))
+#1 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/lib/Cake/Routing/Dispatcher.php(89): Dispatcher->_invoke(Object(PatientsController), Object(CakeRequest), Object(CakeResponse))
+#2 /Users/Peter/dev/wittinginnovation.com/Sites/Scheduler/app/webroot/index.php(96): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
